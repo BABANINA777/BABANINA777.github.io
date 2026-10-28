@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Коттеджный посёлок «Михайловское» — Земельные участки ИЖС в лесу</title>
+  <meta name="description"
+    content="Продажа земельных участков ИЖС в коттеджном посёлке Михайловское (Кременкульское с/п, 25 га). Асфальтированные дороги 5,14 км, электричество от Трансформаторной подстанции, газ через ГРПШ, участки у лесного массива." />
+
+  <!-- Иконка вкладки (Favicon) с фирменным логотипом -->
+  <link rel="icon" type="image/png" href="image/logo_bereza1.png" />
+  <link rel="apple-touch-icon" href="image/logo_bereza1.png" />
+
+  <!-- Единая пара шрифтов: Manrope + антиква Cormorant Garamond + каллиграфический Marck Script под вывеску -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&family=Marck+Script&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Конфигурация Tailwind CSS с премиальной цветовой палитрой -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#F3F5F4',
+              card: '#FBFCFC',
+              surface: '#E5E9E8',
+              border: '#B8C0BF',
+              borderSubtle: '#D6DCDA',
+              textPrimary: '#202526',
+              textSecondary: '#4B5352',
+              textMuted: '#6F7977',
+              accent: '#365F4A',
+              accentHover: '#294A39',
+              warm: '#8B9694',
+              warmHover: '#707B79',
+              pine: '#242A2B',
+              sand: '#EDF0EF',
+              highlight: '#DDE7E1'
+            }
+          },
+          fontFamily: {
+            sans: ['"Manrope"', 'sans-serif'],
+            heading: ['"Manrope"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            script: ['"Marck Script"', 'cursive', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Единый шрифтовой стек и плавное сглаживание шрифтов */
+    html,
+    body {
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      color: #f0eee7;
+      text-shadow: 0 3px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Плавное размытие фона и кастомные тени */
+    .glass-nav-light {
+      background: rgba(232, 236, 233, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .card-shadow {
+      box-shadow: 0 10px 30px -5px rgba(32, 37, 38, 0.07), 0 4px 10px -2px rgba(32, 37, 38, 0.03);
+    }
+
+    .card-shadow-hover {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card-shadow-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -10px rgba(32, 37, 38, 0.14), 0 8px 16px -4px rgba(32, 37, 38, 0.05);
+    }
+
+    /* Скрытие стандартного скроллбара для горизонтальных галерей */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Плавное увеличение картинок при наведении */
+    .img-zoom {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .group:hover .img-zoom {
+      transform: scale(1.05);
+    }
+
+    /* ------------------------------------------------------------------------- */
+
+    /* Спокойная природная дизайн-система для контентных секций.                 */
+    /* Первый экран и плавающая шапка намеренно не входят в область этих правил. */
+    /* ------------------------------------------------------------------------- */
+    :is(#concept, #catalog, #guarantees, #location, #builder) {
+      --refined-bg: #f3f1ea;
+      --refined-card: #faf9f5;
+      --refined-surface: #e8ebe4;
+      --refined-border: #d7d8d0;
+      --refined-text: #252923;
+      --refined-muted: #626a62;
+      --refined-green: #315844;
+      --refined-green-dark: #243f32;
+      --refined-warm: #a78352;
+      color: var(--refined-text);
+    }
+
+    #concept,
+    #location {
+      background: var(--refined-surface);
+    }
+
+    #catalog,
+    #guarantees,
+    #builder {
+      background: var(--refined-bg);
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) :is(h2, h3.font-serif) {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      color: var(--refined-text);
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) :is(.text-brand-warm, .text-amber-300) {
+      color: var(--refined-warm) !important;
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) :is(.text-brand-textMuted, .text-slate-600) {
+      color: var(--refined-muted) !important;
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) :is(.bg-white, .bg-\[\#f4f5f2\]) {
+      background-color: var(--refined-card) !important;
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) :is(.border-brand-borderSubtle, .border-stone-200\/80, .border-slate-200) {
+      border-color: var(--refined-border) !important;
+    }
+
+    /* Радиусы имеют иерархию: крупные поверхности 18px, карточки 14px. */
+    :is(#concept, #catalog, #guarantees, #location, #builder) .rounded-3xl {
+      border-radius: 18px !important;
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) .rounded-2xl {
+      border-radius: 14px !important;
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) .rounded-xl {
+      border-radius: 10px !important;
+    }
+
+    /* Мягкие тени без эффекта парящих пластиковых панелей. */
+    :is(#concept, #catalog, #guarantees, #location, #builder) .card-shadow {
+      box-shadow: 0 8px 24px rgba(37, 41, 35, 0.065);
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) .card-shadow-hover {
+      box-shadow: 0 7px 20px rgba(37, 41, 35, 0.055);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    :is(#concept, #catalog, #guarantees, #location, #builder) .card-shadow-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(37, 41, 35, 0.1);
+    }
+
+    /* Карточки инженерии: спокойнее движение, теплее поверхность. */
+    #concept [onclick^="openInfraModal"] {
+      border-radius: 14px !important;
+      background: var(--refined-card) !important;
+      border-color: var(--refined-border) !important;
+      box-shadow: 0 5px 18px rgba(37, 41, 35, 0.055) !important;
+      transform: none;
+    }
+
+    #concept [onclick^="openInfraModal"]:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 10px 26px rgba(37, 41, 35, 0.095) !important;
+    }
+
+    #concept [onclick^="openInfraModal"] h4 {
+      font-weight: 600;
+    }
+
+    #concept [onclick^="openInfraModal"] p {
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    /* Генплан остаётся главным объектом секции, но без чрезмерной тени. */
+    #catalog .group\/map {
+      border-radius: 18px !important;
+      border-color: var(--refined-border) !important;
+      box-shadow: 0 14px 38px rgba(24, 31, 27, 0.14) !important;
+    }
+
+    #catalog tbody tr {
+      background: transparent !important;
+    }
+
+    #catalog tbody tr:hover {
+      background: rgba(49, 88, 68, 0.045) !important;
+    }
+
+    /* Этапы покупки читаются как единый последовательный маршрут. */
+    #guarantees .grid.grid-cols-1.md\:grid-cols-4 {
+      gap: 0;
+      border: 1px solid var(--refined-border);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--refined-card);
+      box-shadow: 0 8px 24px rgba(37, 41, 35, 0.05);
+    }
+
+    #guarantees .grid.grid-cols-1.md\:grid-cols-4>div {
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      background: transparent !important;
+    }
+
+    #guarantees .grid.grid-cols-1.md\:grid-cols-4>div+div {
+      border-top: 1px solid var(--refined-border) !important;
+    }
+
+    #guarantees .grid.grid-cols-1.md\:grid-cols-4 .text-4xl {
+      color: var(--refined-warm) !important;
+      opacity: 0.48;
+      font-weight: 500;
+    }
+
+    #guarantees .grid.grid-cols-1.md\:grid-cols-4 h3 {
+      font-weight: 600;
+    }
+
+    /* Кнопки контентной части становятся фирменно-зелёными. */
+    :is(#catalog, #guarantees, #location, #builder) a.bg-brand-accent,
+    :is(#catalog, #guarantees, #location, #builder) button.bg-brand-accent {
+      background: var(--refined-green) !important;
+      border-radius: 10px !important;
+      box-shadow: 0 5px 14px rgba(36, 63, 50, 0.16) !important;
+    }
+
+    :is(#catalog, #guarantees, #location, #builder) a.bg-brand-accent:hover,
+    :is(#catalog, #guarantees, #location, #builder) button.bg-brand-accent:hover {
+      background: var(--refined-green-dark) !important;
+    }
+
+    /* Проекты домов: меньше декоративного веса у карточек и подписей. */
+    #builder .group.rounded-3xl {
+      border-radius: 14px !important;
+      box-shadow: 0 6px 20px rgba(37, 41, 35, 0.055);
+    }
+
+    #builder .group.rounded-3xl:hover {
+      box-shadow: 0 11px 28px rgba(37, 41, 35, 0.1) !important;
+    }
+
+    #builder .font-extrabold {
+      font-weight: 600 !important;
+    }
+
+    #builder .builder-profile {
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+
+    #builder .builder-profile::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 1px;
+      background: var(--refined-border);
+    }
+
+    /* Оставляем увеличение изображения только в галерее. В карточках — лишь лёгкий подъём. */
+    :is(#concept [onclick^="openInfraModal"], #builder .house-card) img {
+      transform: none !important;
+    }
+
+    #builder .house-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+    }
+
+    #builder .house-card:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Подписи не опускаются ниже 11–12px, основной текст карточек — 13–14px. */
+    #concept [onclick^="openInfraModal"] .infra-badge,
+    #builder .house-card .house-label {
+      font-size: 11px !important;
+      line-height: 1.35;
+    }
+
+    #concept [onclick^="openInfraModal"] .infra-copy {
+      font-size: 13px !important;
+      line-height: 1.55;
+    }
+
+    #builder .house-card .house-meta {
+      font-size: 12px !important;
+    }
+
+    /* Локация: компактные строки вместо вложенных карточек. */
+    #location .travel-fact {
+      padding: 12px 0;
+      border: 0;
+      border-bottom: 1px solid var(--refined-border);
+      border-radius: 0 !important;
+      background: transparent !important;
+    }
+
+    #location .travel-fact:first-child {
+      border-top: 1px solid var(--refined-border);
+    }
+
+    /* Связанные секции получают более компактный ритм. */
+    #guarantees {
+      padding-top: 64px !important;
+      padding-bottom: 64px !important;
+    }
+
+    #concept,
+    #catalog,
+    #builder {
+      padding-top: 96px !important;
+      padding-bottom: 96px !important;
+    }
+
+    #location {
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+    }
+
+    @media (max-width: 639px) {
+
+      #concept,
+      #catalog,
+      #builder,
+      #location {
+        padding-top: 64px !important;
+        padding-bottom: 64px !important;
+      }
+
+      #guarantees {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+      }
+    }
+
+    footer {
+      background: #faf9f5 !important;
+      border-color: #d7d8d0 !important;
+    }
+
+    @media (min-width: 768px) {
+      #guarantees .grid.grid-cols-1.md\:grid-cols-4>div+div {
+        border-top: 0 !important;
+        border-left: 1px solid var(--refined-border) !important;
+      }
+    }
+
+    @media (max-width: 639px) {
+      #concept [onclick^="openInfraModal"] p {
+        font-size: 13px;
+      }
+
+      #builder .builder-profile::before {
+        inset: 0 0 auto;
+        width: 100%;
+        height: 1px;
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="bg-brand-bg text-brand-textPrimary font-sans antialiased selection:bg-brand-accent selection:text-white pb-24 md:pb-0">
+
+  <!-- ========================================================================= -->
+  <!-- 1. ПЛАВАЮЩАЯ ШАПКА-КАПСУЛА (Floating Pill Header в стиле EVASION)         -->
+  <!-- Логотип, пункты меню и кнопка "Связаться с нами" с выпадающими контактами -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-3xl transition-all duration-300">
+    <div
+      class="relative bg-[#f3f1ea]/95 backdrop-blur-lg border border-white/70 rounded-full px-4 sm:px-6 py-2 sm:py-2.5 shadow-[0_8px_24px_rgba(36,63,50,0.12)] flex items-center justify-between">
+
+      <!-- ЛОГОТИП (Фирменная эмблема «Берёза») -->
+      <a href="#" class="flex items-center gap-2 group flex-shrink-0" title="На главную">
+        <img src="image/logo_bereza1.png" onerror="this.src='image/logp_bereza1.png'" alt="Михайловское"
+          class="w-10 h-10 sm:w-11 sm:h-11 object-contain select-none transition-transform group-hover:scale-105" />
+      </a>
+
+      <!-- НАВИГАЦИОННОЕ МЕНЮ (Равномерно распределено, сбалансированные отступы) -->
+      <nav
+        class="hidden lg:flex items-center justify-center gap-4 xl:gap-7 flex-1 mx-4 xl:mx-6 text-xs sm:text-sm font-medium text-slate-700">
+        <a href="#concept" class="hover:text-slate-900 transition-colors whitespace-nowrap">Концепция</a>
+        <a href="#catalog" class="hover:text-slate-900 transition-colors whitespace-nowrap">Генплан</a>
+        <a href="#guarantees" class="hover:text-slate-900 transition-colors whitespace-nowrap">Покупка</a>
+        <a href="#location" class="hover:text-slate-900 transition-colors whitespace-nowrap">Проезд</a>
+        <a href="#builder" class="hover:text-slate-900 transition-colors whitespace-nowrap">Проекты</a>
+      </nav>
+
+      <!-- ПРАВАЯ ЧАСТЬ: Кнопка "Связаться с нами" + Выпадающие контакты -->
+      <div class="relative flex items-center gap-2.5 flex-shrink-0">
+
+        <!-- Черная кнопка-капсула "Связаться с нами" -->
+        <button onclick="toggleContactMenu(event)" id="contact-btn" type="button"
+          class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#315844] hover:bg-[#243f32] text-white font-medium text-xs sm:text-sm transition-colors duration-200 shadow-sm flex items-center gap-2">
+          <span>Связаться с нами</span>
+          <i data-lucide="chevron-down" id="contact-arrow" class="w-3.5 h-3.5 transition-transform duration-200"></i>
+        </button>
+
+        <!-- ВЫПАДАЮЩЕЕ МЕНЮ КОНТАКТОВ (Телефон + TG + VK) -->
+        <div id="contact-dropdown"
+          class="hidden absolute right-0 top-full mt-3 w-72 sm:w-80 bg-[#f4f6f4] rounded-3xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.22)] border border-slate-200/80 flex flex-col gap-4 z-50 transform origin-top-right transition-all">
+
+          <!-- Прямой звонок по телефону и Email -->
+          <div class="flex flex-col gap-1.5">
+            <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Отдел продаж</span>
+            <a href="tel:+79990000000"
+              class="flex items-center gap-2.5 text-base font-bold text-slate-900 hover:text-brand-accent transition-colors">
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-700 shadow-sm">
+                <i data-lucide="phone" class="w-4 h-4 text-brand-accent"></i>
+              </div>
+              <span>+7 (999) 000-00-00</span>
+            </a>
+            <a href="mailto:info@mikhailovskoye.ru"
+              class="flex items-center gap-2.5 text-xs font-semibold text-slate-700 hover:text-brand-accent transition-colors">
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-700 shadow-sm">
+                <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+              </div>
+              <span>info@mikhailovskoye.ru</span>
+            </a>
+            <span class="text-[10px] text-slate-400">Ежедневно с 09:00 до 21:00</span>
+          </div>
+
+          <div class="h-px bg-slate-200/60"></div>
+
+          <!-- Мессенджеры (Telegram + MAX) -->
+          <div class="flex flex-col gap-2">
+            <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Написать напрямую</span>
+
+            <!-- Telegram -->
+            <a href="https://t.me/BABANINA132" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-3 p-2.5 rounded-2xl bg-white hover:bg-[#229ED9] text-slate-800 hover:text-white transition-all shadow-sm group">
+              <div class="w-8 h-8 rounded-xl bg-[#229ED9] text-white flex items-center justify-center shadow-sm">
+                <i data-lucide="send" class="w-4 h-4"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs font-semibold">Telegram</span>
+                <span class="text-[10px] text-slate-500 group-hover:text-white/80">Мгновенная консультация</span>
+              </div>
+            </a>
+
+            <!-- MAX -->
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-3 p-2.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-800 transition-all shadow-sm group">
+              <div class="w-8 h-8 rounded-xl bg-white flex items-center justify-center shadow-xs p-1 overflow-hidden flex-shrink-0 border border-slate-100">
+                <img src="image/Max colored.png" alt="MAX" class="w-full h-full object-contain group-hover:scale-110 transition-transform" />
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs font-semibold text-slate-900">MAX</span>
+                <span class="text-[10px] text-slate-500">Чат и консультация</span>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Кнопка мобильного меню (Гамбургер) -->
+        <button onclick="toggleMobileNav(event)" type="button"
+          class="lg:hidden w-9 h-9 rounded-full bg-slate-200/80 hover:bg-slate-300 text-slate-800 flex items-center justify-center transition-colors"
+          aria-label="Меню">
+          <i data-lucide="menu" id="mobile-menu-icon" class="w-4 h-4"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Мобильная выпадающая плашка со всеми ссылками -->
+    <div id="mobile-nav-panel"
+      class="hidden lg:hidden mt-2 bg-[#e8ece9]/95 backdrop-blur-xl border border-white/70 rounded-3xl p-4 shadow-2xl flex flex-col gap-2">
+      <a href="#concept" onclick="toggleMobileNav()"
+        class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors">Концепция и
+        коммуникации</a>
+      <a href="#catalog" onclick="toggleMobileNav()"
+        class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors">Генплан и
+        цены</a>
+      <a href="#guarantees" onclick="toggleMobileNav()"
+        class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors">Порядок
+        покупки</a>
+      <a href="#location" onclick="toggleMobileNav()"
+        class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors">Проезд</a>
+      <a href="#builder" onclick="toggleMobileNav()"
+        class="px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors">Проекты
+        домов</a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. ГЛАВНЫЙ ЭКРАН (Hero Section)                                           -->
+  <!-- Фоновое изображение «Фон1.jpg» + Центральная надпись + Кнопка             -->
+  <!-- ========================================================================= -->
+  <section
+    class="relative w-full min-h-screen flex flex-col justify-end items-center overflow-hidden pb-24 sm:pb-32 md:pb-40 lg:pb-48">
+
+    <!-- 1. Фоновое изображение посёлка на весь экран -->
+    <div class="absolute inset-0 z-0">
+      <img src="image/Фон1.jpg" alt="Природное окружение посёлка Михайловское"
+        class="w-full h-full object-cover object-center" />
+
+      <!-- Мягкий градиент для контрастности надписи -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#151b18]/90 via-[#151b18]/35 to-[#151b18]/15"></div>
+    </div>
+
+    <!-- 2. Центральный блок: текстовый заголовок и кнопка «Старт первой очереди» -->
+    <div class="relative z-10 w-full max-w-5xl mx-auto px-4 flex flex-col items-center text-center">
+
+      <h1 class="flex flex-col items-center select-none">
+        <span class="hero-title text-[clamp(2.75rem,9.5vw,8rem)] leading-[0.86] whitespace-nowrap">
+          Михайловское
+        </span>
+        <span
+          class="mt-5 sm:mt-7 text-xs sm:text-sm md:text-base font-medium text-white/90 tracking-wide sm:tracking-wider leading-relaxed max-w-xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
+          style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+          Место для жизни рядом с природой.<br class="hidden sm:inline" />Земельные участки для строительства дома в 7
+          минутах от черты города.
+        </span>
+      </h1>
+
+      <!-- Кнопка под надписью -->
+      <a href="#catalog"
+        class="mt-6 sm:mt-8 inline-flex items-center justify-center px-8 sm:px-10 py-3 sm:py-3.5 rounded-full bg-[#19352e] hover:bg-[#10271f] text-white font-semibold text-xs sm:text-sm tracking-wide border border-white/25 shadow-[0_8px_25px_rgba(0,0,0,0.45)] backdrop-blur-md hover:scale-105 active:scale-95 transition-all duration-300">
+        <span>Старт первой очереди</span>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. КОНЦЕПЦИЯ, БЛАГОУСТРОЙСТВО И ИНЖЕНЕРИЯ                                 -->
+  <!-- 3D-визуализации развития + честные инженерные условия (свет, газ, дороги) -->
+  <!-- ========================================================================= -->
+  <section id="concept" class="py-20 bg-white border-t border-brand-borderSubtle overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Заголовок секции и 3 абзаца текста (выровнены по центру) -->
+      <div class="max-w-4xl mx-auto text-center mb-10 sm:mb-12">
+        <div class="text-brand-warm font-bold text-xs sm:text-sm uppercase tracking-wider mb-2.5">
+          Концепция и благоустройство
+        </div>
+        <h2
+          class="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-brand-textPrimary leading-[1.15] mb-6">
+          Каким будет посёлок Михайловское
+        </h2>
+
+        <!-- 3 абзаца текста по порядку -->
+        <div
+          class="space-y-4 sm:space-y-4.5 text-brand-textMuted text-sm sm:text-base lg:text-[17px] leading-relaxed font-normal">
+          <p>
+            «Михайловское» — территория малоэтажной индивидуальной жилой застройки в границах Кременкульского сельского
+            поселения Сосновского муниципального округа Челябинской области.
+          </p>
+          <p>
+            Посёлок проектируется на территории площадью 25 гектаров и рассчитан на комфортную круглогодичную жизнь. В
+            основе концепции — невысокая плотность застройки, собственные земельные участки, удобная улично-дорожная
+            сеть, благоустроенные общественные пространства и близость к природному окружению.
+          </p>
+          <p>
+            С северо-западной стороны территория граничит с лесным массивом смешанных пород. Планировочное решение
+            предусматривает максимально возможное сохранение существующего рельефа и создание комфортной жилой среды с
+            озеленёнными территориями, пешеходными связями и местами для отдыха.
+          </p>
+        </div>
+
+        <!-- Кнопки управления слайдером -->
+        <div class="flex items-center justify-center gap-3 mt-8">
+          <button onclick="scrollGallery('prev')"
+            class="w-12 h-12 rounded-2xl bg-brand-bg hover:bg-brand-accent hover:text-white text-brand-textPrimary border border-brand-borderSubtle flex items-center justify-center transition-all duration-200 shadow-sm group cursor-pointer"
+            title="Предыдущее фото">
+            <i data-lucide="chevron-left" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+          </button>
+
+          <button onclick="scrollGallery('next')"
+            class="w-12 h-12 rounded-2xl bg-brand-accent hover:bg-brand-accentHover text-white flex items-center justify-center transition-all duration-200 shadow-md group cursor-pointer"
+            title="Следующее фото">
+            <i data-lucide="chevron-right" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Лента 3D-рендеров и концепции (компактные аккуратные превью-окошки) -->
+      <div id="gallery-track"
+        class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3 sm:pb-4 pt-2 no-scrollbar cursor-grab active:cursor-grabbing">
+
+        <!-- Рендер 1: Мастер-план территории 25 га (Новое фото с высоты) -->
+        <div
+          class="w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] h-[190px] sm:h-[230px] md:h-[260px] flex-shrink-0 snap-start group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-stone-900 border border-brand-borderSubtle card-shadow-hover cursor-pointer"
+          onclick="openLightbox('image/Concept/photo1.jpg', 'Генеральный план посёлка Михайловское на территории 25 гектаров с высоты птичьего полёта')">
+          <img src="image/Concept/photo1.jpg" alt="Генеральный план посёлка с высоты птичьего полёта"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-85 group-hover:opacity-65 transition-opacity">
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-3.5 sm:p-5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] sm:text-xs text-amber-300 font-semibold uppercase tracking-wider">Мастер-план ·
+                25 га</span>
+              <h3 class="font-heading font-bold text-white text-sm sm:text-base tracking-tight">Территория с высоты</h3>
+            </div>
+            <div
+              class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Рендер 2: Лесной массив вокруг -->
+        <div
+          class="w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] h-[190px] sm:h-[230px] md:h-[260px] flex-shrink-0 snap-start group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-stone-900 border border-brand-borderSubtle card-shadow-hover cursor-pointer"
+          onclick="openLightbox('image/Concept/photo2.jpg', 'Генеральный план и лесное окружение посёлка')">
+          <img src="image/Concept/photo2.jpg" alt="Визуализация природы посёлка"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-85 group-hover:opacity-65 transition-opacity">
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-3.5 sm:p-5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] sm:text-xs text-amber-300 font-semibold uppercase tracking-wider">Природа &
+                Экология</span>
+              <h3 class="font-heading font-bold text-white text-sm sm:text-base tracking-tight">Лесной массив вокруг
+              </h3>
+            </div>
+            <div
+              class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Рендер 3: КПП-->
+        <div
+          class="w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] h-[190px] sm:h-[230px] md:h-[260px] flex-shrink-0 snap-start group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-stone-900 border border-brand-borderSubtle card-shadow-hover cursor-pointer"
+          onclick="openLightbox('image/Concept/photo3.jpg', 'Кпп и въезд')">
+          <img src="image/Concept/photo3.jpg" alt="Современная архитектура посёлка"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 pointer-events-none" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-85 group-hover:opacity-65 transition-opacity">
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-3.5 sm:p-5 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] sm:text-xs text-amber-300 font-semibold uppercase tracking-wider">Архитектурный
+                код</span>
+              <h3 class="font-heading font-bold text-white text-sm sm:text-base tracking-tight">Кпп и въезд
+              </h3>
+            </div>
+            <div
+              class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Деликатный разделитель между галереей и инженерией -->
+      <div class="my-10 sm:my-16 border-t border-brand-borderSubtle"></div>
+
+      <!-- Вторая часть: Инженерия и технические условия -->
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <div class="text-brand-warm font-semibold text-xs sm:text-sm uppercase tracking-wider mb-2">Технические условия
+        </div>
+        <h3 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-brand-textPrimary leading-snug">
+          Инженерия и коммуникации</h3>
+        <p class="text-brand-textMuted text-sm sm:text-base mt-2 sm:mt-3 leading-relaxed font-normal">
+          Честная и проверенная информация о коммуникациях в посёлке
+        </p>
+      </div>
+
+      <!-- Сетка 4 карточек: на мобильном 2 в ряд, на десктопе 4 в ряд -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+
+        <!-- Карточка 1: Электроснабжение -->
+        <div onclick="openInfraModal('electric')"
+          class="group cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden bg-[#f4f5f2] border border-stone-200/80 shadow-sm transition-all duration-300 flex flex-col justify-between">
+          <!-- Фото -->
+          <div class="aspect-[4/3] sm:aspect-[3/4] w-full overflow-hidden relative bg-stone-900">
+            <img src="image/infra_electric.jpg" alt="Электроснабжение в посёлке Михайловское"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <!-- Бейдж -->
+            <div
+              class="infra-badge absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-white/90 backdrop-blur-md px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] font-semibold text-slate-800 shadow-sm">
+              Подведено к посёлку
+            </div>
+          </div>
+          <!-- Текст под фото -->
+          <div class="p-3.5 sm:p-6 lg:p-7 flex flex-col justify-between flex-grow">
+            <div>
+              <h4
+                class="font-heading text-sm sm:text-lg lg:text-xl font-bold text-brand-textPrimary tracking-tight mb-1 sm:mb-2 group-hover:text-brand-accent transition-colors leading-snug">
+                Электроснабжение
+              </h4>
+              <p
+                class="infra-copy text-slate-600 text-[13px] lg:text-sm leading-relaxed line-clamp-2 sm:line-clamp-none">
+                От существующей трансформаторной подстанции — после заключения договора с ресурсоснабжающей
+                организацией.
+              </p>
+            </div>
+            <div
+              class="mt-2.5 sm:mt-4 pt-2 sm:pt-3 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-brand-accent">
+              <span>Подробнее</span>
+              <i data-lucide="arrow-right"
+                class="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 2: Газоснабжение -->
+        <div onclick="openInfraModal('gas')"
+          class="group cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden bg-[#f4f5f2] border border-stone-200/80 shadow-sm transition-all duration-300 flex flex-col justify-between">
+          <!-- Фото -->
+          <div class="aspect-[4/3] sm:aspect-[3/4] w-full overflow-hidden relative bg-stone-900">
+            <img src="image/infra_gas.jpg" alt="Газоснабжение в посёлке Михайловское"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <!-- Бейдж -->
+            <div
+              class="infra-badge absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-white/90 backdrop-blur-md px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] font-semibold text-slate-800 shadow-sm">
+              Газопровод низкого давления ГРПШ
+            </div>
+          </div>
+          <!-- Текст под фото -->
+          <div class="p-3.5 sm:p-6 lg:p-7 flex flex-col justify-between flex-grow">
+            <div>
+              <h4
+                class="font-heading text-sm sm:text-lg lg:text-xl font-bold text-brand-textPrimary tracking-tight mb-1 sm:mb-2 group-hover:text-brand-accent transition-colors leading-snug">
+                Газоснабжение
+              </h4>
+              <p
+                class="infra-copy text-slate-600 text-[13px] lg:text-sm leading-relaxed line-clamp-2 sm:line-clamp-none">
+                От газопровода низкого давления через ГРПШ.
+              </p>
+            </div>
+            <div
+              class="mt-2.5 sm:mt-4 pt-2 sm:pt-3 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-brand-accent">
+              <span>Подробнее</span>
+              <i data-lucide="arrow-right"
+                class="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 3: Водоснабжение и безопасность -->
+        <div onclick="openInfraModal('pipes')"
+          class="group cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden bg-[#f4f5f2] border border-stone-200/80 shadow-sm transition-all duration-300 flex flex-col justify-between">
+          <!-- Фото -->
+          <div class="aspect-[4/3] sm:aspect-[3/4] w-full overflow-hidden relative bg-stone-900">
+            <img src="image/infra_pipes.jpg" alt="Инженерные коммуникации в посёлке Михайловское"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <!-- Бейдж -->
+            <div
+              class="infra-badge absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-white/90 backdrop-blur-md px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] font-semibold text-slate-800 shadow-sm">
+              Скважины · Септики
+            </div>
+          </div>
+          <!-- Текст под фото -->
+          <div class="p-3.5 sm:p-6 lg:p-7 flex flex-col justify-between flex-grow">
+            <div>
+              <h4
+                class="font-heading text-sm sm:text-lg lg:text-xl font-bold text-brand-textPrimary tracking-tight mb-1 sm:mb-2 group-hover:text-brand-accent transition-colors leading-snug">
+                Водоснабжение и безопасность
+              </h4>
+              <p
+                class="infra-copy text-slate-600 text-[13px] lg:text-sm leading-relaxed line-clamp-2 sm:line-clamp-none">
+                Индивидуальные скважины, локальные септики.
+              </p>
+            </div>
+            <div
+              class="mt-2.5 sm:mt-4 pt-2 sm:pt-3 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-brand-accent">
+              <span>Подробнее</span>
+              <i data-lucide="arrow-right"
+                class="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 4: Улично-дорожная сеть -->
+        <div onclick="openInfraModal('road')"
+          class="group cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden bg-[#f4f5f2] border border-stone-200/80 shadow-sm transition-all duration-300 flex flex-col justify-between">
+          <!-- Фото -->
+          <div class="aspect-[4/3] sm:aspect-[3/4] w-full overflow-hidden relative bg-stone-900">
+            <img src="image/infra_road.jpg" alt="Улично-дорожная сеть в посёлке Михайловское"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <!-- Бейдж -->
+            <div
+              class="infra-badge absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-white/90 backdrop-blur-md px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] font-semibold text-slate-800 shadow-sm">
+              5,14 км · Асфальт · 102 м/м
+            </div>
+          </div>
+          <!-- Текст под фото -->
+          <div class="p-3.5 sm:p-6 lg:p-7 flex flex-col justify-between flex-grow">
+            <div>
+              <h4
+                class="font-heading text-sm sm:text-lg lg:text-xl font-bold text-brand-textPrimary tracking-tight mb-1 sm:mb-2 group-hover:text-brand-accent transition-colors leading-snug">
+                Улично-дорожная сеть
+              </h4>
+              <p
+                class="infra-copy text-slate-600 text-[13px] lg:text-sm leading-relaxed line-clamp-2 sm:line-clamp-none">
+                Асфальтобетонное покрытие, 102 гостевых парковки, пожарные развороты, без транзитного грузового
+                движения.
+              </p>
+            </div>
+            <div
+              class="mt-2.5 sm:mt-4 pt-2 sm:pt-3 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-brand-accent">
+              <span>Подробнее</span>
+              <i data-lucide="arrow-right"
+                class="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. ГЕНПЛАН И РАЙОНЫ ПОСЁЛКА                                               -->
+  <!-- Карта поселка из image/static_map.jpg + легенда районов                   -->
+  <!-- ========================================================================= -->
+  <section id="catalog" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Заголовок секции -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+      <div class="max-w-2xl">
+        <div class="text-brand-warm font-bold text-xs sm:text-sm uppercase tracking-wider mb-2">Генплан посёлка</div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-brand-textPrimary leading-[1.15]">
+          Генплан и схема районов посёлка 1-й очереди</h2>
+        <p class="text-sm sm:text-base text-brand-textMuted mt-3">
+          Схема расположения участков, улично-дорожной сети и функциональных зон 1-й очереди посёлка «Михайловское».
+        </p>
+      </div>
+    </div>
+
+    <!-- Карточка со схемой генплана -->
+    <div
+      class="rounded-3xl overflow-hidden border border-brand-borderSubtle bg-white p-3 sm:p-5 card-shadow relative group mb-10">
+      <div class="relative overflow-hidden rounded-2xl bg-stone-50 cursor-zoom-in"
+        onclick="openLightbox('image/static_map.jpg', 'Генплан посёлка Михайловское')"
+        title="Нажмите, чтобы открыть карту в полном размере">
+        <img id="static-village-map" src="image/static_map.jpg" alt="Генплан посёлка Михайловское"
+          class="w-full h-auto block select-none object-contain max-h-[720px] mx-auto rounded-xl transition-transform duration-300 group-hover:scale-[1.01]" />
+
+        <!-- Навесная подсказка об увеличении -->
+        <div
+          class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-brand-borderSubtle/80 shadow-md flex items-center gap-2 text-xs text-brand-textPrimary font-medium">
+          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-brand-accent"></i>
+          <span>Нажмите для увеличения</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Блок легенды районов и зон -->
+    <div class="mb-12">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+        <div>
+          <h3 class="font-serif text-2xl sm:text-3xl text-brand-textPrimary font-normal">
+            Зонирование посёлка «Михайловское»
+          </h3>
+          <p class="text-xs sm:text-sm text-brand-textMuted mt-1">
+            Шесть категорий земельных участков: расположение, особенности и преимущества.
+          </p>
+        </div>
+        <div
+          class="text-xs text-brand-textMuted font-mono bg-brand-surface/50 px-3 py-1.5 rounded-xl border border-brand-borderSubtle/60 self-start sm:self-auto">
+          6 категорий участков
+        </div>
+      </div>
+
+      <!-- Сетка карточек районов (Легенда) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- 1. VIP (Розовая зона) -->
+        <div
+          class="rounded-2xl bg-white border border-brand-borderSubtle p-5 card-shadow hover:shadow-md transition-all hover:border-rose-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <div
+                class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-rose-50 border border-rose-200/80 text-rose-700 text-xs font-semibold">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-[0_0_6px_rgba(244,63,94,0.5)]"></span>
+                <span>VIP · Розовая зона</span>
+              </div>
+              <span class="text-[11px] font-medium text-brand-textMuted">Обособленность и статус</span>
+            </div>
+            <div class="text-[11px] font-medium text-rose-800/70 mb-1">У въезда и рядом с лесом</div>
+            <h4 class="font-serif text-lg font-semibold text-brand-textPrimary mb-2">
+              VIP — приватность и независимость
+            </h4>
+            <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-3">
+              Эксклюзивная зона посёлка для тех, кто ценит приватность, независимость и свой формат загородной жизни.
+              Расположение у въезда и рядом с лесом сочетает удобство доступа с природным окружением и максимальной
+              обособленностью от остальной территории.
+            </p>
+          </div>
+          <div class="pt-3.5 mt-2 border-t border-brand-borderSubtle/60 text-xs italic text-brand-warm font-medium">
+            «Своя территория. Свои правила.»
+          </div>
+        </div>
+
+        <!-- 2. Премиум (Голубая зона) -->
+        <div
+          class="rounded-2xl bg-white border border-brand-borderSubtle p-5 card-shadow hover:shadow-md transition-all hover:border-sky-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <div
+                class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-sky-50 border border-sky-200/80 text-sky-700 text-xs font-semibold">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-400 shadow-[0_0_6px_rgba(56,189,248,0.5)]"></span>
+                <span>Премиум · Голубая зона</span>
+              </div>
+              <span class="text-[11px] font-medium text-brand-textMuted">Близость к лесу</span>
+            </div>
+            <div class="text-[11px] font-medium text-sky-800/70 mb-1">Верхняя и центральная части, у леса</div>
+            <h4 class="font-serif text-lg font-semibold text-brand-textPrimary mb-2">
+              Премиум — жизнь рядом с лесом
+            </h4>
+            <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-3">
+              Для тех, кто выбирает загородную жизнь ради природы, тишины и ощущения единения с ландшафтом.
+              Непосредственная близость к естественному лесному массиву за границами посёлка и внутренние лесопарковые
+              пространства для прогулок и отдыха.
+            </p>
+          </div>
+          <div class="pt-3.5 mt-2 border-t border-brand-borderSubtle/60 text-xs italic text-brand-warm font-medium">
+            «Лес становится частью жизни.»
+          </div>
+        </div>
+
+        <!-- 3. Бизнес (Жёлтая зона) -->
+        <div
+          class="rounded-2xl bg-white border border-brand-borderSubtle p-5 card-shadow hover:shadow-md transition-all hover:border-amber-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <div
+                class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200/80 text-amber-800 text-xs font-semibold">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(245,158,11,0.5)]"></span>
+                <span>Бизнес · Жёлтая зона</span>
+              </div>
+              <span class="text-[11px] font-medium text-brand-textMuted">Центральное расположение</span>
+            </div>
+            <div class="text-[11px] font-medium text-amber-800/70 mb-1">Центральная часть посёлка</div>
+            <h4 class="font-serif text-lg font-semibold text-brand-textPrimary mb-2">
+              Бизнес — разумный баланс возможностей
+            </h4>
+            <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-3">
+              Центральная зона «Михайловского», объединяющая удобство расположения и комфорт загородной жизни. Участки
+              находятся в средней части массива рядом с зелёными зонами отдыха. Взвешенное решение без переплаты за
+              самые эксклюзивные локации.
+            </p>
+          </div>
+          <div class="pt-3.5 mt-2 border-t border-brand-borderSubtle/60 text-xs italic text-brand-warm font-medium">
+            «Баланс цены, расположения и возможностей.»
+          </div>
+        </div>
+
+        <!-- 4. Комфорт плюс (Фиолетовая зона) -->
+        <div
+          class="rounded-2xl bg-white border border-brand-borderSubtle p-5 card-shadow hover:shadow-md transition-all hover:border-purple-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <div
+                class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-purple-50 border border-purple-200/80 text-purple-700 text-xs font-semibold">
+                <span class="w-2.5 h-2.5 rounded-full bg-purple-500 shadow-[0_0_6px_rgba(168,85,247,0.5)]"></span>
+                <span>Комфорт плюс · Фиолетовая зона</span>
+              </div>
+              <span class="text-[11px] font-medium text-brand-textMuted">Близость к Главной улице</span>
+            </div>
+            <div class="text-[11px] font-medium text-purple-800/70 mb-1">Выше диагональной улицы, у Главной улицы</div>
+            <h4 class="font-serif text-lg font-semibold text-brand-textPrimary mb-2">
+              Комфорт плюс — удобство в жизни
+            </h4>
+            <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-3">
+              Практичный выбор для тех, кто ценит удобное расположение участка, доступность внутренних маршрутов и
+              продуманную логистику. Участки находятся выше диагональной улицы, вблизи Главной улицы и центральной части
+              посёлка.
+            </p>
+          </div>
+          <div class="pt-3.5 mt-2 border-t border-brand-borderSubtle/60 text-xs italic text-brand-warm font-medium">
+            «Удобное расположение и продуманная логистика.»
+          </div>
+        </div>
+
+        <!-- 5. Комфорт (Зелёная зона) -->
+        <div
+          class="rounded-2xl bg-white border border-brand-borderSubtle p-5 card-shadow hover:shadow-md transition-all hover:border-emerald-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <div
+                class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.5)]"></span>
+                <span>Комфорт · Зелёная зона</span>
+              </div>
+              <span class="text-[11px] font-medium text-brand-textMuted">Практичность и баланс</span>
+            </div>
+            <div class="text-[11px] font-medium text-emerald-800/70 mb-1">Ниже диагональной улицы</div>
+            <h4 class="font-serif text-lg font-semibold text-brand-textPrimary mb-2">
+              Комфорт — пространство для жизни
+            </h4>
+            <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-3">
+              Зона для тех, кто хочет создать загородное пространство, рационально распределяя бюджет между покупкой
+              участка, строительством дома и благоустройством. Участки расположены ниже диагональной улицы, позволяя
+              вложить больше в сам дом.
+            </p>
+          </div>
+          <div class="pt-3.5 mt-2 border-t border-brand-borderSubtle/60 text-xs italic text-brand-warm font-medium">
+            «Пространство для своих планов и своего дома.»
+          </div>
+        </div>
+
+        <!-- 6. Стандарт плюс (Красная зона) -->
+        <div
+          class="rounded-2xl bg-white border border-brand-borderSubtle p-5 card-shadow hover:shadow-md transition-all hover:border-red-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <div
+                class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-red-50 border border-red-200/80 text-red-700 text-xs font-semibold">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,0.5)]"></span>
+                <span>Стандарт плюс · Красная зона</span>
+              </div>
+              <span class="text-[11px] font-medium text-brand-textMuted">Открытые ландшафты</span>
+            </div>
+            <div class="text-[11px] font-medium text-red-800/70 mb-1">Дальняя часть посёлка, луговая территория</div>
+            <h4 class="font-serif text-lg font-semibold text-brand-textPrimary mb-2">
+              Стандарт плюс — свобода просторов
+            </h4>
+            <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-3">
+              Привлекательная возможность приобрести участок в «Михайловском» по наиболее доступной стартовой цене.
+              Дальняя часть посёлка в окружении луговых пространств, обилие естественного света и ощущение простора для
+              создания загородной мечты.
+            </p>
+          </div>
+          <div class="pt-3.5 mt-2 border-t border-brand-borderSubtle/60 text-xs italic text-brand-warm font-medium">
+            «Загородная жизнь начинается здесь.»
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 4.1 Официальные проверенные цифры проекта (ТЭП по проекту планировки и межевания) -->
+      <div class="mt-10 sm:mt-12 rounded-3xl bg-white border border-brand-borderSubtle card-shadow overflow-hidden">
+
+        <!-- Шапка таблицы показателей -->
+        <div
+          class="p-6 sm:p-8 border-b border-brand-borderSubtle bg-brand-surface/40 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl text-brand-textPrimary font-normal">
+              Технико-экономические показатели посёлка
+            </h3>
+          </div>
+        </div>
+
+        <!-- Таблица данных (Адаптивная с идеальной типографикой) -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr
+                class="border-b border-brand-borderSubtle bg-stone-50/80 text-brand-textSecondary text-[11px] sm:text-xs uppercase tracking-wider font-semibold">
+                <th class="py-3.5 px-5 sm:px-8 w-1/2">Показатель</th>
+                <th class="py-3.5 px-5 sm:px-8 w-1/2">Значение (по проекту планировки и межевания)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-borderSubtle/60 text-brand-textPrimary font-normal">
+
+              <tr class="hover:bg-brand-highlight/30 transition-colors">
+                <td class="py-3.5 px-5 sm:px-8 font-medium text-brand-textPrimary">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="maximize-2" class="w-4 h-4 text-brand-accent/70 flex-shrink-0"></i>
+                    <span>Площадь территории</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-5 sm:px-8 font-semibold text-brand-textPrimary">
+                  25,012 га
+                </td>
+              </tr>
+
+              <tr class="bg-brand-surface/20 hover:bg-brand-highlight/30 transition-colors">
+                <td class="py-3.5 px-5 sm:px-8 font-medium text-brand-textPrimary">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="home" class="w-4 h-4 text-brand-accent/70 flex-shrink-0"></i>
+                    <span>Земельные участки под строительство</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-5 sm:px-8 font-semibold text-brand-textPrimary">
+                  181 участок <span class="font-normal text-brand-textMuted text-xs block sm:inline sm:ml-1">(110 в
+                    квартале
+                    1, 71 в квартале 2)</span>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-brand-highlight/30 transition-colors">
+                <td class="py-3.5 px-5 sm:px-8 font-medium text-brand-textPrimary">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="layers" class="w-4 h-4 text-brand-accent/70 flex-shrink-0"></i>
+                    <span>Запланированная этажность жилых домов на территории поселка</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-5 sm:px-8 font-semibold text-brand-textPrimary">
+                  1–2 этажа
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-highlight/30 transition-colors">
+                <td class="py-3.5 px-5 sm:px-8 font-medium text-brand-textPrimary">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="milestone" class="w-4 h-4 text-brand-warm flex-shrink-0"></i>
+                    <span>Улично-дорожная сеть</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-5 sm:px-8 font-bold text-brand-accent">
+                  5,14 км <span class="font-normal text-brand-textMuted text-xs block sm:inline sm:ml-1"></span>
+                </td>
+              </tr>
+
+              <tr class="bg-brand-surface/20 hover:bg-brand-highlight/30 transition-colors">
+                <td class="py-3.5 px-5 sm:px-8 font-medium text-brand-textPrimary">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="car" class="w-4 h-4 text-brand-accent/70 flex-shrink-0"></i>
+                    <span>Гостевые парковочные места</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-5 sm:px-8 font-semibold text-brand-textPrimary">
+                  Предусмотренны
+                </td>
+              </tr>
+
+              <tr class="hover:bg-brand-highlight/30 transition-colors">
+                <td class="py-3.5 px-5 sm:px-8 font-medium text-brand-textPrimary">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="flame-kindling" class="w-4 h-4 text-brand-accent/70 flex-shrink-0"></i>
+                    <span>Газоснабжение</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-5 sm:px-8 font-semibold text-brand-textPrimary">
+                  От газопровода низкого давления через ГРПШ, подведённого к границам посёлка
+                </td>
+              </tr>
+
+              <tr class="bg-brand-surface/20 hover:bg-brand-highlight/30 transition-colors">
+                <td class="py-3.5 px-5 sm:px-8 font-medium text-brand-textPrimary">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="droplet" class="w-4 h-4 text-brand-accent/70 flex-shrink-0"></i>
+                    <span>Водоснабжение</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-5 sm:px-8 font-semibold text-brand-textPrimary">
+                  Автономное, от индивидуальных скважин на каждом участке
+                </td>
+              </tr>
+
+              <tr class="hover:bg-brand-highlight/30 transition-colors">
+                <td class="py-3.5 px-5 sm:px-8 font-medium text-brand-textPrimary">
+                  <div class="flex items-center gap-2.5">
+                    <i data-lucide="recycle" class="w-4 h-4 text-brand-accent/70 flex-shrink-0"></i>
+                    <span>Водоотведение</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-5 sm:px-8 font-semibold text-brand-textPrimary">
+                  Локальное, одно- и двухкамерные септики на каждом участке
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- Информационная плашка: Свободное строительство без обязательного подряда -->
+      <div
+        class="mt-10 p-6 sm:p-8 rounded-3xl bg-white border border-brand-borderSubtle card-shadow flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-brand-accent/10 text-brand-accent flex items-center justify-center flex-shrink-0">
+            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-heading text-base font-bold text-brand-textPrimary">Свободный выбор проекта и подрядчика во
+              всех районах</h4>
+            <p class="text-xs sm:text-sm text-brand-textMuted mt-0.5">Участки продаются без обязательного подряда под
+              индивидуальное жилищное строительство (ИЖС).</p>
+          </div>
+        </div>
+        <a href="https://t.me/BABANINA132?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%D0%B0%D0%BC%20%D0%B8%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D1%8B%D0%BC%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BA%D0%B0%D0%BC%20%D0%B2%20%D0%BF%D0%BE%D1%81%D1%91%D0%BB%D0%BA%D0%B5%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5."
+          target="_blank" rel="noopener noreferrer"
+          class="whitespace-nowrap px-6 py-3.5 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-white font-semibold text-xs sm:text-sm transition-all shadow-sm hover:shadow-md cursor-pointer inline-flex items-center justify-center gap-2">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>Получить консультацию по районам</span>
+        </a>
+      </div>
+
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. ЮРИДИЧЕСКАЯ ЧИСТОТА И ЭТАПЫ ПОКУПКИ                                    -->
+  <!-- Разъяснение прозрачности сделки, ипотека и регистрация в Росреестре       -->
+  <!-- ========================================================================= -->
+  <section id="guarantees" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="text-brand-warm font-bold text-xs sm:text-sm uppercase tracking-wider mb-2">Надёжность сделки</div>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-brand-textPrimary leading-[1.15]">
+        Как проходит покупка участка</h2>
+      <p
+        class="text-brand-textMuted text-sm sm:text-base lg:text-[17px] mt-3 sm:mt-4 leading-relaxed font-normal max-w-2xl mx-auto">
+        Прозрачная процедура без скрытых комиссий, прямая регистрация права собственности в МФЦ и Росреестре.
+      </p>
+    </div>
+
+    <!-- 4 Шага к покупке -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+      <!-- Шаг 1 -->
+      <div class="p-6 rounded-3xl bg-white border border-brand-borderSubtle card-shadow text-left">
+        <div class="font-heading text-4xl font-extrabold text-brand-accent/20 mb-3">01</div>
+        <h3 class="font-heading text-lg font-bold text-brand-textPrimary mb-2">Просмотр территории</h3>
+        <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+          Встречаем вас в посёлке, показываем свободные участки, лес, подъездные пути и точки подключения сетей.
+        </p>
+      </div>
+
+      <!-- Шаг 2 -->
+      <div class="p-6 rounded-3xl bg-white border border-brand-borderSubtle card-shadow text-left">
+        <div class="font-heading text-4xl font-extrabold text-brand-accent/20 mb-3">02</div>
+        <h3 class="font-heading text-lg font-bold text-brand-textPrimary mb-2">Бронирование и аудит</h3>
+        <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+          Фиксируем выбранный участок и цену. Предоставляем выписку из ЕГРН и кадастровый паспорт для проверки.
+        </p>
+      </div>
+
+      <!-- Шаг 3 -->
+      <div class="p-6 rounded-3xl bg-white border border-brand-borderSubtle card-shadow text-left">
+        <div class="font-heading text-4xl font-extrabold text-brand-accent/20 mb-3">03</div>
+        <h3 class="font-heading text-lg font-bold text-brand-textPrimary mb-2">Договор купли-продажи</h3>
+        <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+          Подписание прямого ДКП без посредников. Возможно использование льготной ипотеки (IT, Семейная, Господдержка).
+        </p>
+      </div>
+
+      <!-- Шаг 4 -->
+      <div class="p-6 rounded-3xl bg-white border border-brand-borderSubtle card-shadow text-left">
+        <div class="font-heading text-4xl font-extrabold text-brand-accent/20 mb-3">04</div>
+        <h3 class="font-heading text-lg font-bold text-brand-textPrimary mb-2">Регистрация в МФЦ</h3>
+        <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+          Подача документов в Росреестр. Вы получаете право собственности и можете сразу начинать строительство.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 7. ЛОКАЦИЯ, СХЕМА ПРОЕЗДА И ОКРУЖЕНИЕ                                     -->
+  <!-- Интерактивная карта, время в пути, ориентиры                              -->
+  <!-- ========================================================================= -->
+  <section id="location" class="py-20 bg-brand-surface/60 border-t border-brand-borderSubtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col lg:flex-row gap-12 items-stretch">
+
+        <!-- Левая колонка: Описание дороги и ориентиров -->
+        <div class="w-full lg:w-5/12 flex flex-col justify-between space-y-8">
+          <div>
+            <div class="text-brand-warm font-bold text-xs sm:text-sm uppercase tracking-wider mb-2">Транспортная
+              доступность
+            </div>
+            <h2
+              class="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-brand-textPrimary leading-[1.15]">
+              Как доехать до посёлка</h2>
+            <p
+              class="text-brand-textMuted text-sm sm:text-base lg:text-[17px] mt-3 sm:mt-4 leading-relaxed font-normal">
+              Посёлок расположен в экологически чистом районе с удобным выездом на скоростную трассу. Дорога от города
+              занимает около 7 минут по асфальтированному шоссе.
+            </p>
+
+            <!-- Карточки времени и ориентиров -->
+            <div class="space-y-4 mt-8">
+              <div class="travel-fact flex items-center gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="car" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-textMuted">На автомобиле</span>
+                  <div class="font-semibold text-sm text-brand-textPrimary">7 минут до города
+                  </div>
+                </div>
+              </div>
+
+              <div class="travel-fact flex items-center gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-textMuted">Точные координаты</span>
+                  <div class="font-semibold text-xs sm:text-sm text-brand-textPrimary font-mono">55.125187, 61.176327
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Кнопки Навигатора и Telegram -->
+          <div class="space-y-3 pt-4 border-t border-brand-borderSubtle">
+            <a href="https://yandex.ru/maps/?rtext=~55.125187,61.176327&rtt=auto" target="_blank"
+              rel="noopener noreferrer"
+              class="w-full flex items-center justify-center gap-3 py-4 rounded-2xl bg-brand-accent text-white font-bold text-sm hover:bg-brand-accentHover transition-all shadow-md">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Построить маршрут в Яндекс Навигаторе</span>
+            </a>
+
+            <a href="https://t.me/BABANINA132?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D1%8C%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%82%D0%BE%D1%87%D0%BD%D1%83%D1%8E%20%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D0%BA%D1%83%20%D0%BF%D0%BE%D1%81%D1%91%D0%BB%D0%BA%D0%B0%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20(%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D1%8B%2055.125187%2C%2061.176327).%20%D0%9F%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D1%83%D1%8E%20%D0%BF%D1%80%D0%B8%D0%B5%D1%85%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80."
+              target="_blank" rel="noopener noreferrer"
+              class="w-full flex items-center justify-center gap-2.5 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-brand-textPrimary border border-brand-borderSubtle font-semibold text-xs sm:text-sm transition-all shadow-xs hover:shadow-md">
+              <i data-lucide="send" class="w-4 h-4 text-[#229ED9]"></i>
+              <span>Получить геометку в Telegram</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Правая колонка: Интерактивная карта -->
+        <div
+          class="w-full lg:w-7/12 rounded-3xl overflow-hidden border border-brand-borderSubtle bg-white relative min-h-[380px] sm:min-h-[460px] card-shadow flex flex-col">
+          <iframe title="Интерактивная карта проезда к посёлку"
+            class="w-full h-full min-h-[380px] sm:min-h-[460px] border-0"
+            src="https://yandex.ru/map-widget/v1/?ll=61.176327%2C55.125187&amp;z=14&amp;pt=61.176327,55.125187,pm2rdm"
+            loading="lazy">
+          </iframe>
+
+          <!-- Плашка поверх карты с точкой посёлка -->
+          <div
+            class="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-brand-border px-4 py-2.5 rounded-2xl flex items-center gap-2.5 shadow-lg">
+            <i data-lucide="map-pin" class="w-4 h-4 text-brand-accent flex-shrink-0"></i>
+            <div>
+              <div class="text-xs font-bold text-brand-textPrimary">КП «Михайловское»</div>
+              <div class="text-[10px] text-brand-textMuted">Земельные участки ИЖС</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 7. СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ (ПРОЕКТЫ ДОМОВ)                                -->
+  <!-- Специальное предложение по центру + по 2 дома слева и справа в столбик     -->
+  <!-- ========================================================================= -->
+  <section id="builder" class="py-20 bg-brand-bg border-t border-brand-borderSubtle relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Сетка: 3 колонки на десктопе (2 дома слева, инфо по центру, 2 дома справа) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+
+        <!-- ЛЕВАЯ КОЛОНКА: 2 дома в столбик (КРАФТ и НОРДИК) -->
+        <div class="lg:col-span-4 flex flex-col gap-6 order-2 lg:order-1">
+
+          <!-- 1. ПРОЕКТ КРАФТ -->
+          <div
+            class="house-card group rounded-3xl bg-white border border-brand-borderSubtle card-shadow overflow-hidden flex flex-col hover:border-brand-accent/40 transition-all duration-300">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950 cursor-pointer"
+              onclick="openPlanModal(1)">
+              <img src="image/1house/house.jpg" alt="Проект КРАФТ"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div
+                class="house-label absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full font-semibold uppercase tracking-wider text-brand-textPrimary shadow-xs">
+                КРАФТ
+              </div>
+              <div class="absolute bottom-3 left-3.5 right-3.5 flex items-end justify-between text-white">
+                <div>
+                  <div class="house-label text-white/70 uppercase tracking-wider font-medium">Площадь</div>
+                  <div class="text-base sm:text-lg font-extrabold text-amber-300 drop-shadow-sm">144,35 м²</div>
+                </div>
+                <span
+                  class="house-meta text-white/90 bg-white/15 backdrop-blur-xs px-2.5 py-1 rounded-md font-semibold text-xs">2
+                  этажа · 4 спальни</span>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5 flex flex-col justify-between flex-grow bg-white">
+              <div
+                class="grid grid-cols-3 gap-1.5 text-xs text-brand-textSecondary mb-4 py-2 border-y border-slate-100">
+                <div class="flex items-center justify-center gap-1.5">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>2 этажа</span>
+                </div>
+                <div class="flex items-center justify-center gap-1.5 border-x border-slate-100 px-1">
+                  <i data-lucide="bed-double" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>4 спальни</span>
+                </div>
+                <div class="flex items-center justify-center gap-1.5">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>144,35 м²</span>
+                </div>
+              </div>
+              <button type="button" onclick="openPlanModal(1)"
+                class="w-full py-2.5 px-4 rounded-xl bg-brand-surface hover:bg-brand-accent hover:text-white text-brand-textPrimary text-xs font-semibold border border-brand-borderSubtle transition-all flex items-center justify-center gap-2 cursor-pointer group/btn shadow-2xs">
+                <i data-lucide="layout"
+                  class="w-3.5 h-3.5 text-brand-warm group-hover/btn:text-white transition-colors"></i>
+                <span>Смотреть планировку</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. ПРОЕКТ НОРДИК -->
+          <div
+            class="house-card group rounded-3xl bg-white border border-brand-borderSubtle card-shadow overflow-hidden flex flex-col hover:border-brand-accent/40 transition-all duration-300">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950 cursor-pointer"
+              onclick="openPlanModal(2)">
+              <img src="image/2house/house.jpg" alt="Проект НОРДИК"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div
+                class="house-label absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full font-semibold uppercase tracking-wider text-brand-textPrimary shadow-xs">
+                НОРДИК
+              </div>
+              <div class="absolute bottom-3 left-3.5 right-3.5 flex items-end justify-between text-white">
+                <div>
+                  <div class="house-label text-white/70 uppercase tracking-wider font-medium">Площадь</div>
+                  <div class="text-base sm:text-lg font-extrabold text-amber-300 drop-shadow-sm">142,85 м²</div>
+                </div>
+                <span
+                  class="house-meta text-white/90 bg-white/15 backdrop-blur-xs px-2.5 py-1 rounded-md font-semibold text-xs">2
+                  этажа · 4 спальни</span>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5 flex flex-col justify-between flex-grow bg-white">
+              <div
+                class="grid grid-cols-3 gap-1.5 text-xs text-brand-textSecondary mb-4 py-2 border-y border-slate-100">
+                <div class="flex items-center justify-center gap-1.5">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>2 этажа</span>
+                </div>
+                <div class="flex items-center justify-center gap-1.5 border-x border-slate-100 px-1">
+                  <i data-lucide="bed-double" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>4 спальни</span>
+                </div>
+                <div class="flex items-center justify-center gap-1.5">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>142,85 м²</span>
+                </div>
+              </div>
+              <button type="button" onclick="openPlanModal(2)"
+                class="w-full py-2.5 px-4 rounded-xl bg-brand-surface hover:bg-brand-accent hover:text-white text-brand-textPrimary text-xs font-semibold border border-brand-borderSubtle transition-all flex items-center justify-center gap-2 cursor-pointer group/btn shadow-2xs">
+                <i data-lucide="layout"
+                  class="w-3.5 h-3.5 text-brand-warm group-hover/btn:text-white transition-colors"></i>
+                <span>Смотреть планировку</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ЦЕНТРАЛЬНАЯ КОЛОНКА: Специальное предложение -->
+        <div
+          class="builder-profile lg:col-span-4 flex flex-col justify-between order-1 lg:order-2 p-6 sm:p-8 lg:p-9 relative overflow-hidden text-center bg-white rounded-3xl border border-brand-borderSubtle card-shadow">
+
+          <!-- Фоновый декоративный акцент -->
+          <div class="absolute -top-20 -right-20 w-48 h-48 bg-brand-warm/10 rounded-full blur-3xl pointer-events-none">
+          </div>
+          <div
+            class="absolute -bottom-20 -left-20 w-48 h-48 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none">
+          </div>
+
+          <div class="relative z-10 flex flex-col items-center justify-center my-auto py-3">
+            <!-- Бейдж -->
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-brand-borderSubtle shadow-2xs mb-4">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-warm"></i>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-brand-textSecondary">
+                Готовые решения
+              </span>
+            </div>
+
+            <!-- Главный заголовок -->
+            <h2
+              class="font-serif text-2xl sm:text-3xl lg:text-[32px] font-normal text-brand-textPrimary leading-tight mb-4">
+              Специальное предложение
+            </h2>
+
+            <div class="w-12 h-0.5 bg-brand-warm/40 rounded-full mb-5"></div>
+
+            <!-- Текст предложения -->
+            <div
+              class="space-y-4 text-brand-textSecondary text-sm sm:text-[15px] leading-relaxed max-w-sm mx-auto font-normal">
+              <p>
+                Собственниками земельных участков специально для вашего удобства разработаны типовые планировочные
+                решения 1- и 2-этажных домов.
+              </p>
+              <p>
+                В случае заинтересованности готовы предложить проектную документацию для постройки дома.
+              </p>
+            </div>
+          </div>
+
+          <!-- Кнопка связи -->
+          <div class="relative z-10 pt-4">
+            <a href="https://t.me/BABANINA132?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BD%D0%B0%20%D0%B4%D0%BE%D0%BC%20%D0%B2%20%D0%BF%D0%BE%D1%81%D1%91%D0%BB%D0%BA%D0%B5%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5."
+              target="_blank" rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl bg-brand-accent hover:bg-brand-accentHover text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-lg cursor-pointer group">
+              <i data-lucide="send" class="w-4 h-4 text-brand-warm group-hover:scale-110 transition-transform"></i>
+              <span>Получить проектную документацию</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА: 2 дома в столбик (СКАЙ и ФОРЕСТ) -->
+        <div class="lg:col-span-4 flex flex-col gap-6 order-3 lg:order-3">
+
+          <!-- 3. ПРОЕКТ СКАЙ -->
+          <div
+            class="house-card group rounded-3xl bg-white border border-brand-borderSubtle card-shadow overflow-hidden flex flex-col hover:border-brand-accent/40 transition-all duration-300">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950 cursor-pointer"
+              onclick="openPlanModal(3)">
+              <img src="image/3house/house.jpg" alt="Проект СКАЙ"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div
+                class="house-label absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full font-semibold uppercase tracking-wider text-brand-textPrimary shadow-xs">
+                СКАЙ
+              </div>
+              <div class="absolute bottom-3 left-3.5 right-3.5 flex items-end justify-between text-white">
+                <div>
+                  <div class="house-label text-white/70 uppercase tracking-wider font-medium">Площадь</div>
+                  <div class="text-base sm:text-lg font-extrabold text-amber-300 drop-shadow-sm">102,27 м²</div>
+                </div>
+                <span
+                  class="house-meta text-white/90 bg-white/15 backdrop-blur-xs px-2.5 py-1 rounded-md font-semibold text-xs">1
+                  этаж · 2 спальни</span>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5 flex flex-col justify-between flex-grow bg-white">
+              <div
+                class="grid grid-cols-3 gap-1.5 text-xs text-brand-textSecondary mb-4 py-2 border-y border-slate-100">
+                <div class="flex items-center justify-center gap-1.5">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>1 этаж</span>
+                </div>
+                <div class="flex items-center justify-center gap-1.5 border-x border-slate-100 px-1">
+                  <i data-lucide="bed-double" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>2 спальни</span>
+                </div>
+                <div class="flex items-center justify-center gap-1.5">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>102,27 м²</span>
+                </div>
+              </div>
+              <button type="button" onclick="openPlanModal(3)"
+                class="w-full py-2.5 px-4 rounded-xl bg-brand-surface hover:bg-brand-accent hover:text-white text-brand-textPrimary text-xs font-semibold border border-brand-borderSubtle transition-all flex items-center justify-center gap-2 cursor-pointer group/btn shadow-2xs">
+                <i data-lucide="layout"
+                  class="w-3.5 h-3.5 text-brand-warm group-hover/btn:text-white transition-colors"></i>
+                <span>Смотреть планировку</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 4. ПРОЕКТ ФОРЕСТ -->
+          <div
+            class="house-card group rounded-3xl bg-white border border-brand-borderSubtle card-shadow overflow-hidden flex flex-col hover:border-brand-accent/40 transition-all duration-300">
+            <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950 cursor-pointer"
+              onclick="openPlanModal(4)">
+              <img src="image/4house/house.jpg" alt="Проект ФОРЕСТ"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div
+                class="house-label absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full font-semibold uppercase tracking-wider text-brand-textPrimary shadow-xs">
+                ФОРЕСТ
+              </div>
+              <div class="absolute bottom-3 left-3.5 right-3.5 flex items-end justify-between text-white">
+                <div>
+                  <div class="house-label text-white/70 uppercase tracking-wider font-medium">Площадь</div>
+                  <div class="text-base sm:text-lg font-extrabold text-amber-300 drop-shadow-sm">98,70 м²</div>
+                </div>
+                <span
+                  class="house-meta text-white/90 bg-white/15 backdrop-blur-xs px-2.5 py-1 rounded-md font-semibold text-xs">1
+                  этаж · 3 спальни</span>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5 flex flex-col justify-between flex-grow bg-white">
+              <div
+                class="grid grid-cols-3 gap-1.5 text-xs text-brand-textSecondary mb-4 py-2 border-y border-slate-100">
+                <div class="flex items-center justify-center gap-1.5">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>1 этаж</span>
+                </div>
+                <div class="flex items-center justify-center gap-1.5 border-x border-slate-100 px-1">
+                  <i data-lucide="bed-double" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>3 спальни</span>
+                </div>
+                <div class="flex items-center justify-center gap-1.5">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-brand-warm flex-shrink-0"></i>
+                  <span>98,70 м²</span>
+                </div>
+              </div>
+              <button type="button" onclick="openPlanModal(4)"
+                class="w-full py-2.5 px-4 rounded-xl bg-brand-surface hover:bg-brand-accent hover:text-white text-brand-textPrimary text-xs font-semibold border border-brand-borderSubtle transition-all flex items-center justify-center gap-2 cursor-pointer group/btn shadow-2xs">
+                <i data-lucide="layout"
+                  class="w-3.5 h-3.5 text-brand-warm group-hover/btn:text-white transition-colors"></i>
+                <span>Смотреть планировку</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 8. ПОДВАЛ САЙТА (Footer)                                                  -->
+  <!-- Контакты отдела продаж, режим работы, реквизиты и ссылки                  -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-brand-borderSubtle py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+
+        <!-- Колонка 1: О посёлке -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="image/logo_bereza1.png" onerror="this.src='image/logp_bereza1.png'" alt="Михайловское"
+              class="w-10 h-10 object-contain select-none flex-shrink-0" />
+            <span
+              class="font-serif text-xl tracking-[0.14em] pl-[0.14em] font-normal text-brand-textPrimary">МИХАЙЛОВСКОЕ</span>
+          </div>
+          <p class="text-brand-textMuted text-sm max-w-md leading-relaxed">
+            Продажа земельных участков под индивидуальное жилищное строительство (ИЖС) напрямую от собственника.
+            Юридическая чистота, регистрация в Росреестре, круглогодичный подъезд и смешанный лес.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-brand-accent font-semibold pt-2">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>Прямая продажа от собственника без посредников</span>
+          </div>
+        </div>
+
+        <!-- Колонка 2: Навигация -->
+        <div>
+          <h4 class="font-heading text-xs font-bold text-brand-textPrimary uppercase tracking-wider mb-4">Навигация</h4>
+          <ul class="space-y-2.5 text-sm text-brand-textMuted">
+            <li><a href="#concept" class="hover:text-brand-accent transition-colors">Концепция и коммуникации</a></li>
+            <li><a href="#catalog" class="hover:text-brand-accent transition-colors">Генплан и цены</a></li>
+            <li><a href="#guarantees" class="hover:text-brand-accent transition-colors">Порядок покупки</a></li>
+            <li><a href="#location" class="hover:text-brand-accent transition-colors">Схема проезда</a></li>
+            <li><a href="#builder" class="hover:text-brand-accent transition-colors">Проекты домов</a></li>
+          </ul>
+        </div>
+
+        <!-- Колонка 3: Прямые контакты -->
+        <div>
+          <h4 class="font-heading text-xs font-bold text-brand-textPrimary uppercase tracking-wider mb-4">Отдел продаж
+          </h4>
+          <div class="space-y-3 text-sm">
+            <a href="tel:+79990000000"
+              class="block font-heading text-lg font-bold text-brand-accent hover:underline">
+              +7 (999) 000-00-00
+            </a>
+            <a href="https://t.me/BABANINA132" target="_blank" rel="noopener noreferrer"
+              class="block font-heading text-sm font-semibold text-slate-700 hover:text-brand-accent transition-colors">
+              Написать в Telegram
+            </a>
+            <a href="mailto:info@mikhailovskoye.ru"
+              class="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-brand-accent transition-colors">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-accent"></i>
+              <span>info@mikhailovskoye.ru</span>
+            </a>
+            <div class="text-xs text-brand-textMuted">
+              Ежедневно с 09:00 до 21:00 (без выходных)
+            </div>
+
+            <!-- Иконки мессенджеров в футере -->
+            <div class="flex items-center gap-3 pt-2">
+              <a href="https://t.me/BABANINA132" target="_blank" rel="noopener noreferrer" title="Telegram"
+                class="w-8 h-8 rounded-lg bg-brand-bg border border-brand-borderSubtle flex items-center justify-center text-slate-700 hover:text-white hover:bg-[#229ED9] hover:border-[#229ED9] transition-colors">
+                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" title="MAX"
+                class="w-8 h-8 rounded-lg bg-white border border-brand-borderSubtle flex items-center justify-center p-1.5 hover:border-slate-400 transition-all hover:scale-105 shadow-2xs">
+                <img src="image/Max colored.png" alt="MAX" class="w-full h-full object-contain" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Копирайт и юридическая оговорка -->
+      <div
+        class="border-t border-brand-borderSubtle pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-textMuted">
+        <div>© 2026 Коттеджный посёлок «Михайловское». Все права защищены.</div>
+        <div class="text-center sm:text-right">Информация на сайте не является публичной офертой (ст. 437 ГК РФ).</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- 9. ЗАКРЕПЛЁННЫЙ МОБИЛЬНЫЙ БАР (Floating Action Bar)                       -->
+  <!-- Всегда виден внизу экрана на смартфонах для мгновенной связи в 1 клик     -->
+  <!-- ========================================================================= -->
+  <div
+    class="fixed bottom-0 left-0 right-0 z-50 md:hidden glass-nav-light border-t border-brand-borderSubtle p-3 shadow-2xl">
+    <div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+
+      <!-- Кнопка вызова -->
+      <a href="tel:+79990000000"
+        class="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-brand-accent text-white font-bold text-sm shadow-md active:scale-95 transition-transform">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        <span>Позвонить</span>
+      </a>
+
+      <!-- Кнопка Telegram -->
+      <a href="https://t.me/BABANINA132" target="_blank" rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-[#229ED9] text-white font-bold text-sm shadow-md active:scale-95 transition-transform">
+        <i data-lucide="send" class="w-4 h-4"></i>
+        <span>Telegram</span>
+      </a>
+
+    </div>
+  </div>
+
+
+
+  <!-- ========================================================================= -->
+  <!-- 11. МОДАЛЬНОЕ ОКНО ПОДРОБНОГО ОПИСАНИЯ КОММУНИКАЦИЙ                      -->
+  <!-- Текст + параметры слева, фотография высокого разрешения справа             -->
+  <!-- ========================================================================= -->
+  <div id="infra-modal"
+    class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4 sm:p-6 lg:p-8"
+    onclick="closeInfraModal(event)">
+    <div
+      class="relative w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100 flex flex-col md:flex-row max-h-[90vh]"
+      onclick="event.stopPropagation()">
+
+      <!-- Кнопка закрытия -->
+      <button onclick="closeInfraModal()"
+        class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white flex items-center justify-center transition-all shadow-md"
+        title="Закрыть">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Левая колонка: Текстовое описание и технические параметры -->
+      <div class="w-full md:w-1/2 p-6 sm:p-8 lg:p-10 flex flex-col justify-between overflow-y-auto bg-white">
+        <div>
+          <!-- Бейдж -->
+          <div class="flex items-center gap-2 mb-3">
+            <span id="infra-modal-badge"
+              class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 border border-emerald-500/20"></span>
+          </div>
+
+          <!-- Заголовок -->
+          <h3 id="infra-modal-title"
+            class="font-heading text-2xl sm:text-3xl font-bold text-brand-textPrimary tracking-tight mb-4"></h3>
+
+          <!-- Описание -->
+          <p id="infra-modal-desc" class="text-slate-600 text-sm leading-relaxed mb-6"></p>
+
+          <!-- Список параметров -->
+          <div class="border-t border-slate-100 pt-4">
+            <h4 class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Технические параметры</h4>
+            <div id="infra-modal-specs" class="space-y-2.5"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая колонка: Фотография высокого разрешения -->
+      <div class="w-full md:w-1/2 relative min-h-[260px] md:min-h-[480px] bg-slate-900 overflow-hidden">
+        <img id="infra-modal-img" src="" alt="" class="w-full h-full object-cover" />
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 11.2 МОДАЛЬНОЕ ОКНО ПЛАНИРОВОК ДОМОВ                                      -->
+  <!-- Большое, аккуратное окно с 1 или 2 планировками (планами этажей)          -->
+  <!-- ========================================================================= -->
+  <div id="plan-modal"
+    class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-3 sm:p-6 lg:p-8"
+    onclick="closePlanModal(event)">
+    <div
+      class="relative w-full max-w-5xl bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100 flex flex-col max-h-[92vh] animate-in fade-in zoom-in-95 duration-200"
+      onclick="event.stopPropagation()">
+
+      <!-- Верхняя панель модального окна -->
+      <div
+        class="px-6 py-4 sm:px-8 sm:py-5 border-b border-brand-borderSubtle flex items-center justify-between bg-brand-surface/60">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-accent text-white flex items-center justify-center shadow-sm">
+            <i data-lucide="layout" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span
+                class="text-[10px] font-bold uppercase tracking-wider text-brand-warm bg-brand-warm/10 px-2 py-0.5 rounded-md">Планировочное
+                решение</span>
+              <h3 id="plan-modal-title" class="font-heading font-bold text-lg sm:text-xl text-brand-textPrimary">Проект
+              </h3>
+            </div>
+            <p id="plan-modal-subtitle" class="text-xs sm:text-sm text-brand-textMuted mt-0.5">Архитектурная схема и
+              экспликация помещений</p>
+          </div>
+        </div>
+
+        <button onclick="closePlanModal()"
+          class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors cursor-pointer"
+          title="Закрыть">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Основная область с изображениями планировок (1 или 2 плана) -->
+      <div id="plan-modal-body" class="p-4 sm:p-6 lg:p-8 overflow-y-auto max-h-[calc(92vh-140px)] bg-slate-50/50">
+        <!-- Генерируется в JS -->
+      </div>
+
+      <!-- Нижняя панель с кнопкой скачивания -->
+      <div
+        class="px-6 py-4 sm:px-8 sm:py-4 border-t border-brand-borderSubtle bg-white flex items-center justify-end">
+        <a id="plan-modal-cta" href="#" target="_blank"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-white font-medium text-xs sm:text-sm transition-all shadow-md cursor-pointer">
+          <i data-lucide="download" class="w-4 h-4 text-brand-warm"></i>
+          <span>Скачать / Открыть PDF-проект</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 11.3 МОДАЛЬНОЕ ОКНО ЛАЙТБОКСА (Увеличенный просмотр фото концепции)        -->
+  <!-- Открывается на комфортную часть экрана (до 88vh / 5xl), не на весь экран   -->
+  <!-- ========================================================================= -->
+  <div id="lightbox-modal"
+    class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-3 sm:p-6 lg:p-8"
+    onclick="closeLightbox(event)">
+    <div
+      class="relative max-w-4xl max-h-[88vh] w-auto bg-slate-950 rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col animate-in fade-in zoom-in-95 duration-200"
+      onclick="event.stopPropagation()">
+
+      <!-- Верхняя панель с подписью и кнопкой закрытия -->
+      <div
+        class="px-5 py-3 sm:px-6 sm:py-3.5 bg-slate-900/95 border-b border-white/10 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <h4 id="lightbox-caption" class="text-xs sm:text-sm font-semibold text-white truncate max-w-xs sm:max-w-md">
+            Концепция посёлка
+          </h4>
+        </div>
+        <button onclick="closeLightbox()"
+          class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer"
+          title="Закрыть">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Изображение: центрировано, до 70vh, не выходит за пределы модалки -->
+      <div class="p-2 sm:p-4 bg-black/50 flex items-center justify-center overflow-hidden">
+        <img id="lightbox-img" src="" alt="Фотография"
+          class="max-h-[70vh] max-w-full w-auto h-auto object-contain rounded-xl select-none block" />
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 12. JAVASCRIPT ЛОГИКА (Галерея, Лайтбокс, Фильтр каталога, Дома)           -->
+  <!-- Легковесный чистый код без сторонних тяжелых библиотек                    -->
+  <!-- ========================================================================= -->
+  <script>
+    // 1. Инициализация иконок Lucide
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+
+    // 2. Функция горизонтальной прокрутки ленты 3D-рендеров
+    function scrollGallery(direction) {
+      const track = document.getElementById('gallery-track');
+      if (!track) return;
+      const scrollAmount = track.clientWidth * 0.75;
+      if (direction === 'next') {
+        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      }
+    }
+
+    // 2.2 Функция горизонтальной прокрутки каталога проектов домов
+    function scrollHouses(direction) {
+      const track = document.getElementById('houses-track');
+      if (!track) return;
+      const scrollAmount = track.clientWidth;
+      if (direction === 'next') {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        if (track.scrollLeft + scrollAmount >= maxScroll - 20) {
+          track.scrollTo({ left: maxScroll, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      } else {
+        if (track.scrollLeft - scrollAmount <= 20) {
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
+      }
+    }
+
+    // 3. Управление модальным окном (Лайтбокс для картинок)
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    // Открытие фото в полном размере
+    function openLightbox(src, caption) {
+      if (!lightbox || !lightboxImg) return;
+      lightboxImg.src = src;
+      if (lightboxCaption) lightboxCaption.textContent = caption || 'Концепция посёлка';
+      lightbox.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    // Закрытие лайтбокса
+    function closeLightbox(e) {
+      if (e && e.target && e.target.id === 'lightbox-img') return;
+      if (!lightbox) return;
+      lightbox.classList.add('opacity-0', 'pointer-events-none');
+      if (document.getElementById('plan-modal') && document.getElementById('plan-modal').classList.contains('opacity-0')) {
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // 3.4 База данных проектов домов и управление модальным окном планировок
+    const housesData = {
+      1: {
+        name: 'КРАФТ',
+        render: 'image/1house/house.jpg',
+        area: '144,35 м²',
+        floors: '2 этажа',
+        bedrooms: '4 спальни',
+        pdf: 'image/1house/2эт-2_25.02.26.pdf',
+        plans: [
+          { title: 'План 1-го этажа', img: 'image/1house/plan1.jpg' },
+          { title: 'План 2-го этажа', img: 'image/1house/plan2.jpg' }
+        ]
+      },
+      2: {
+        name: 'НОРДИК',
+        render: 'image/2house/house.jpg',
+        area: '142,85 м²',
+        floors: '2 этажа',
+        bedrooms: '4 спальни',
+        pdf: 'image/2house/2эт-1_25.02.26.pdf',
+        plans: [
+          { title: 'План 1-го этажа', img: 'image/2house/plan1.jpg' },
+          { title: 'План 2-го этажа', img: 'image/2house/plan2.jpg' }
+        ]
+      },
+      3: {
+        name: 'СКАЙ',
+        render: 'image/3house/house.jpg',
+        area: '102,27 м²',
+        floors: '1 этаж',
+        bedrooms: '2 спальни',
+        pdf: 'image/3house/1эт-3_25.02.26.pdf',
+        plans: [
+          { title: 'План дома', img: 'image/3house/plan1.jpg' }
+        ]
+      },
+      4: {
+        name: 'ФОРЕСТ',
+        render: 'image/4house/house.jpg',
+        area: '98,70 м²',
+        floors: '1 этаж',
+        bedrooms: '3 спальни',
+        pdf: 'image/4house/1эт-4_25.02.26.pdf',
+        plans: [
+          { title: 'План дома', img: 'image/4house/plan1.jpg' }
+        ]
+      }
+    };
+
+    function openPlanModal(houseId) {
+      const house = housesData[houseId];
+      if (!house) return;
+
+      const modal = document.getElementById('plan-modal');
+      const titleEl = document.getElementById('plan-modal-title');
+      const subtitleEl = document.getElementById('plan-modal-subtitle');
+      const bodyEl = document.getElementById('plan-modal-body');
+      const ctaBtn = document.getElementById('plan-modal-cta');
+
+      if (!modal || !bodyEl) return;
+
+      titleEl.textContent = `Проект «${house.name}» · ${house.area}`;
+      subtitleEl.textContent = `${house.floors} · ${house.bedrooms}`;
+
+      // Привязка PDF файла к кнопке скачивания/просмотра
+      ctaBtn.href = house.pdf;
+      ctaBtn.setAttribute('target', '_blank');
+      ctaBtn.setAttribute('download', `Проект_${house.name}_${house.area}.pdf`);
+
+      // 1. Блок крупного рендера фасада дома
+      const renderHtml = `
+        <div class="mb-6 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
+            <div>
+              <span class="font-heading font-bold text-sm sm:text-base text-brand-textPrimary">Архитектурный рендер дома</span>
+              <p class="text-xs text-brand-textMuted mt-0.5">Внешний вид фасада и окружение</p>
+            </div>
+            <span class="text-xs text-brand-warm font-semibold bg-brand-warm/10 px-2.5 py-1 rounded-md">Фасад</span>
+          </div>
+          <div class="rounded-xl overflow-hidden bg-slate-900 flex items-center justify-center cursor-zoom-in group relative" onclick="openLightbox('${house.render}', '${house.name} — Архитектурный рендер')" title="Нажмите для увеличения">
+            <img src="${house.render}" alt="Проект ${house.name} — экстерьер" class="w-full h-auto max-h-[500px] object-cover group-hover:scale-102 transition-transform duration-300" />
+          </div>
+        </div>
+      `;
+
+      // 2. Блок планировочных решений (1 или 2 этажа)
+      let plansHtml = '';
+      if (house.plans.length === 2) {
+        plansHtml = `
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="font-heading font-bold text-sm sm:text-base text-brand-textPrimary">Планы этажей</h4>
+              <span class="text-xs text-brand-textMuted">Нажмите на план для увеличения</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex flex-col bg-white p-4 rounded-2xl border border-slate-200 shadow-xs">
+                <div class="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
+                  <span class="font-heading font-bold text-sm text-brand-textPrimary">${house.plans[0].title}</span>
+                  <span class="text-xs text-brand-warm font-medium bg-brand-warm/10 px-2 py-0.5 rounded">1-й уровень</span>
+                </div>
+                <div class="rounded-xl overflow-hidden bg-white border border-slate-100 flex items-center justify-center cursor-zoom-in group p-2" onclick="openLightbox('${house.plans[0].img}', '${house.name} — ${house.plans[0].title}')" title="Нажмите для увеличения">
+                  <img src="${house.plans[0].img}" alt="${house.plans[0].title}" class="w-full h-auto object-contain max-h-[480px] group-hover:scale-102 transition-transform duration-300" />
+                </div>
+              </div>
+              <div class="flex flex-col bg-white p-4 rounded-2xl border border-slate-200 shadow-xs">
+                <div class="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
+                  <span class="font-heading font-bold text-sm text-brand-textPrimary">${house.plans[1].title}</span>
+                  <span class="text-xs text-brand-warm font-medium bg-brand-warm/10 px-2 py-0.5 rounded">2-й уровень</span>
+                </div>
+                <div class="rounded-xl overflow-hidden bg-white border border-slate-100 flex items-center justify-center cursor-zoom-in group p-2" onclick="openLightbox('${house.plans[1].img}', '${house.name} — ${house.plans[1].title}')" title="Нажмите для увеличения">
+                  <img src="${house.plans[1].img}" alt="${house.plans[1].title}" class="w-full h-auto object-contain max-h-[480px] group-hover:scale-102 transition-transform duration-300" />
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        plansHtml = `
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="font-heading font-bold text-sm sm:text-base text-brand-textPrimary">Планировочное решение</h4>
+              <span class="text-xs text-brand-textMuted">Нажмите на план для увеличения</span>
+            </div>
+            <div class="max-w-3xl mx-auto flex flex-col bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-xs">
+              <div class="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
+                <span class="font-heading font-bold text-base text-brand-textPrimary">${house.plans[0].title}</span>
+                <span class="text-xs text-brand-warm font-medium bg-brand-warm/10 px-2.5 py-0.5 rounded">Экспликация помещений</span>
+              </div>
+              <div class="rounded-xl overflow-hidden bg-white border border-slate-100 flex items-center justify-center cursor-zoom-in group p-3" onclick="openLightbox('${house.plans[0].img}', '${house.name} — ${house.plans[0].title}')" title="Нажмите для увеличения">
+                <img src="${house.plans[0].img}" alt="${house.plans[0].title}" class="w-full h-auto object-contain max-h-[540px] group-hover:scale-102 transition-transform duration-300" />
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      bodyEl.innerHTML = renderHtml + plansHtml;
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closePlanModal(e) {
+      if (e && e.target && e.target.closest('.max-w-5xl') && !e.target.closest('button')) return;
+      const modal = document.getElementById('plan-modal');
+      if (modal) {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // 4. Генплан посёлка (просмотр в полном размере реализован через встроенный openLightbox)
+
+
+    // 5. Управление выпадающим меню контактов ("Связаться с нами")
+    function toggleContactMenu(e) {
+      if (e) e.stopPropagation();
+      const dropdown = document.getElementById('contact-dropdown');
+      const arrow = document.getElementById('contact-arrow');
+      if (!dropdown) return;
+
+      const isHidden = dropdown.classList.contains('hidden');
+      if (isHidden) {
+        dropdown.classList.remove('hidden');
+        if (arrow) arrow.style.transform = 'rotate(180deg)';
+      } else {
+        dropdown.classList.add('hidden');
+        if (arrow) arrow.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Функция для вызова меню контактов по кнопке "Получить консультацию по районам"
+    function openContactMenu(e) {
+      if (e) e.stopPropagation();
+      const dropdown = document.getElementById('contact-dropdown');
+      const arrow = document.getElementById('contact-arrow');
+      if (dropdown) {
+        dropdown.classList.remove('hidden');
+        if (arrow) arrow.style.transform = 'rotate(180deg)';
+      }
+      // Плавно прокручиваем наверх к шапке
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 6. Управление мобильным меню
+    function toggleMobileNav(e) {
+      if (e) e.stopPropagation();
+      const mobilePanel = document.getElementById('mobile-nav-panel');
+      if (mobilePanel) {
+        mobilePanel.classList.toggle('hidden');
+      }
+    }
+
+    // 7. База данных и модальное окно для карточек раздела "Инженерия и коммуникации"
+    const infraData = {
+      electric: {
+        badge: "Подведено к посёлку",
+        title: "Электроснабжение",
+        desc: "Электроснабжение посёлка предусмотрено от существующей трансформаторной подстанции. Проектом организовано качественное наружное освещение всех внутренних улиц и проездов.<br><br>",
+        image: "image/infra_electric.jpg",
+        specs: [
+          { label: "Источник питания", value: "Существующая ТП в границах поселка" },
+          { label: "Освещение территории", value: "Запроектировано наружное освещение" },
+          { label: "Охват сети", value: "Подведено к границам посёлка" }
+        ]
+      },
+      gas: {
+        badge: "ГРПШ · Охват 100%",
+        title: "Газоснабжение",
+        desc: "Газоснабжение посёлка предусмотрено проектом от газопровода низкого давления, подведённого к границам посёлка, через специализированный газорегуляторный пункт шкафного типа (ГРПШ).<br><br>Программа догазификации запланирована на 2028 год.",
+        image: "image/infra_gas.jpg",
+        specs: [
+          { label: "Источник газа", value: "Газопровод низкого давления, подведённый к границам посёлка" },
+          { label: "Распределение", value: "Через шкафной пункт ГРПШ" },
+        ]
+      },
+      pipes: {
+        badge: "Скважины · Септики",
+        title: "Водоснабжение и водоотведение",
+        desc: "Водоснабжение посёлка организовано автономно от индивидуальных скважин на каждом земельном участке. Водоотведение — локальное, через надёжные одно- и двухкамерные септики на участках домовладений, по выбору собствеников при проектировании и застройке участка.<br>",
+        image: "image/infra_pipes.jpg",
+        specs: [
+          { label: "Водоснабжение", value: "Автономное (индивидуальные скважины)" },
+          { label: "Водоотведение", value: "Локальное (одно- и 2-камерные септики)" },
+        ]
+      },
+      road: {
+        badge: "5,14 км · Асфальт · 102 м/м",
+        title: "Улично-дорожная сеть",
+        desc: "Общая протяжённость проектируемой улично-дорожной сети составляет 5,14 км. Основные улицы и местные проезды запроектированы с асфальтобетонным покрытием (покрытие будет укладываться по мере завершения основных строительных работ на территории поселка).<br><br><strong>Транспортные и пожарные решения:</strong> планировка обеспечивает беспрепятственный проезд пожарной техники ко всем зданиям посёлка, на тупиковых проездах предусмотрены разворотные площадки. Для временной и гостевой парковки проектом предусмотренны машино-места; постоянное хранение авто — на индивидуальных участках. Транзитное грузовое движение по внутренним улицам посёлка исключено.",
+        image: "image/infra_road.jpg",
+        specs: [
+          { label: "Протяжённость дорог", value: "5,14 км улично-дорожной сети" },
+          { label: "Тип покрытия", value: "Асфальтобетонное (по окончании основных этапов строительных работ в поселке)" },
+          { label: "Гостевая парковка", value: "Предусмотрена проектом" },
+          { label: "Пожарные развороты", value: "Площадки на тупиках" },
+          { label: "Грузовой трафик", value: "Транзитное движение исключено" }
+        ]
+      }
+    };
+
+    function openInfraModal(type) {
+      const item = infraData[type];
+      if (!item) return;
+
+      document.getElementById('infra-modal-badge').textContent = item.badge;
+      document.getElementById('infra-modal-title').textContent = item.title;
+      document.getElementById('infra-modal-desc').innerHTML = item.desc;
+      document.getElementById('infra-modal-img').src = item.image;
+      document.getElementById('infra-modal-img').alt = item.title;
+
+      const specsContainer = document.getElementById('infra-modal-specs');
+      specsContainer.innerHTML = item.specs.map(s => `
+        <div class="flex justify-between items-baseline py-1.5 border-b border-slate-100 text-xs">
+          <span class="text-slate-400 font-medium">${s.label}</span>
+          <span class="font-semibold text-slate-800 text-right ml-2">${s.value}</span>
+        </div>
+      `).join('');
+
+      const modal = document.getElementById('infra-modal');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeInfraModal(e) {
+      if (e && e.target && e.target.closest('.max-w-4xl') && !e.target.closest('button')) return;
+      const modal = document.getElementById('infra-modal');
+      if (modal) {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // 8. Поддержка клавиши Escape для закрытия всех модальных окон
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeInfraModal();
+        closePlanModal();
+      }
+    });
+
+    // 9. Закрытие выпадающих окон при клике вне их области
+    document.addEventListener('click', (e) => {
+      const contactDropdown = document.getElementById('contact-dropdown');
+      const contactBtn = document.getElementById('contact-btn');
+      const arrow = document.getElementById('contact-arrow');
+
+      if (contactDropdown && !contactDropdown.classList.contains('hidden')) {
+        if (!contactDropdown.contains(e.target) && (!contactBtn || !contactBtn.contains(e.target))) {
+          contactDropdown.classList.add('hidden');
+          if (arrow) arrow.style.transform = 'rotate(0deg)';
+        }
+      }
+
+      const mobilePanel = document.getElementById('mobile-nav-panel');
+      if (mobilePanel && !mobilePanel.classList.contains('hidden')) {
+        if (!mobilePanel.contains(e.target) && !e.target.closest('button[onclick*="toggleMobileNav"]')) {
+          mobilePanel.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
