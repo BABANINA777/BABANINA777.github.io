@@ -71,10 +71,21 @@
 
     .hero-title {
       font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-      font-weight: 500;
-      letter-spacing: -0.035em;
-      color: #f0eee7;
-      text-shadow: 0 3px 24px rgba(0, 0, 0, 0.5);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      background: linear-gradient(180deg,
+        #FFFDF2 0%,
+        #FDE49E 22%,
+        #E5A953 45%,
+        #9B5A1D 50%,
+        #F6C06D 70%,
+        #DF9D43 85%,
+        #8C4710 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 2px 4px rgba(41, 11, 2, 0.5)) drop-shadow(0 10px 28px rgba(0, 0, 0, 0.75));
     }
 
     /* Плавное размытие фона и кастомные тени */
@@ -418,14 +429,14 @@
   <!-- 1. ПЛАВАЮЩАЯ ШАПКА-КАПСУЛА (Floating Pill Header в стиле EVASION)         -->
   <!-- Логотип, пункты меню и кнопка "Связаться с нами" с выпадающими контактами -->
   <!-- ========================================================================= -->
-  <header class="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-3xl transition-all duration-300">
+  <header class="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-4xl transition-all duration-300">
     <div
-      class="relative bg-[#f3f1ea]/95 backdrop-blur-lg border border-white/70 rounded-full px-4 sm:px-6 py-2 sm:py-2.5 shadow-[0_8px_24px_rgba(36,63,50,0.12)] flex items-center justify-between">
+      class="relative bg-[#f3f1ea]/95 backdrop-blur-lg border border-white/70 rounded-full px-5 sm:px-7 py-2.5 sm:py-3.5 shadow-[0_8px_24px_rgba(36,63,50,0.12)] flex items-center justify-between">
 
       <!-- ЛОГОТИП (Фирменная эмблема «Берёза») -->
       <a href="#" class="flex items-center gap-2 group flex-shrink-0" title="На главную">
         <img src="image/logo_bereza1.png" onerror="this.src='image/logp_bereza1.png'" alt="Михайловское"
-          class="w-10 h-10 sm:w-11 sm:h-11 object-contain select-none transition-transform group-hover:scale-105" />
+          class="h-10 sm:h-12 md:h-14 w-auto object-contain select-none transition-transform group-hover:scale-105" />
       </a>
 
       <!-- НАВИГАЦИОННОЕ МЕНЮ (Равномерно распределено, сбалансированные отступы) -->
@@ -555,18 +566,11 @@
     </div>
 
     <!-- 2. Центральный блок: текстовый заголовок и кнопка «Старт первой очереди» -->
-    <div class="relative z-10 w-full max-w-5xl mx-auto px-4 flex flex-col items-center text-center">
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
 
       <h1 class="flex flex-col items-center select-none">
-        <span class="hero-title text-[clamp(2.75rem,9.5vw,8rem)] leading-[0.86] whitespace-nowrap">
-          Михайловское
-        </span>
-        <span
-          class="mt-5 sm:mt-7 text-xs sm:text-sm md:text-base font-medium text-white/90 tracking-wide sm:tracking-wider leading-relaxed max-w-xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
-          style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
-          Место для жизни рядом с природой.<br class="hidden sm:inline" />Земельные участки для строительства дома в 7
-          минутах от черты города.
-        </span>
+        <img src="image/title.png" alt="Михайловское — загородное поселение"
+          class="w-[96%] sm:w-[92%] max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl h-auto object-contain select-none filter drop-shadow-[0_16px_40px_rgba(0,0,0,0.8)]" />
       </h1>
 
       <!-- Кнопка под надписью -->
@@ -1680,11 +1684,11 @@
 
         <!-- Колонка 1: О посёлке -->
         <div class="md:col-span-2 space-y-4">
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3.5">
             <img src="image/logo_bereza1.png" onerror="this.src='image/logp_bereza1.png'" alt="Михайловское"
-              class="w-10 h-10 object-contain select-none flex-shrink-0" />
+              class="h-12 sm:h-14 w-auto object-contain select-none flex-shrink-0" />
             <span
-              class="font-serif text-xl tracking-[0.14em] pl-[0.14em] font-normal text-brand-textPrimary">МИХАЙЛОВСКОЕ</span>
+              class="font-serif text-xl sm:text-2xl tracking-[0.14em] pl-[0.14em] font-normal text-brand-textPrimary">МИХАЙЛОВСКОЕ</span>
           </div>
           <p class="text-brand-textMuted text-sm max-w-md leading-relaxed">
             Продажа земельных участков под индивидуальное жилищное строительство (ИЖС) напрямую от собственника.
