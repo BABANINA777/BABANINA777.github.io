@@ -1,0 +1,5 @@
+﻿User-agent: *
+Allow: /
+Allow: /image/
+
+Sitemap: https://babanina777.github.io/sitemap.xml

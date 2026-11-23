@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://babanina777.github.io/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/Фон1.jpg</image:loc>
+      <image:title>Коттеджный посёлок «Михайловское» — вид посёлка и природное окружение</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/static_map.jpg</image:loc>
+      <image:title>Генеральный план посёлка «Михайловское»</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/Concept/photo1.jpg</image:loc>
+      <image:title>Мастер-план территории 25 гектаров с высоты птичьего полёта</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/Concept/photo2.jpg</image:loc>
+      <image:title>Концепция благоустройства и природный массив</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/Concept/photo3.jpg</image:loc>
+      <image:title>Улично-дорожная сеть и общественные пространства</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/infra_electric.jpg</image:loc>
+      <image:title>Электроснабжение посёлка от собственной трансформаторной подстанции</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/infra_gas.jpg</image:loc>
+      <image:title>Газификация посёлка через распределительный пункт ГРПШ</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/infra_road.jpg</image:loc>
+      <image:title>Асфальтированные дороги и система водоотведения</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/1house/house.jpg</image:loc>
+      <image:title>Проект дома 1 в посёлке Михайловское</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/2house/house.jpg</image:loc>
+      <image:title>Проект дома 2 в посёлке Михайловское</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/3house/house.jpg</image:loc>
+      <image:title>Проект дома 3 в посёлке Михайловское</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://babanina777.github.io/image/4house/house.jpg</image:loc>
+      <image:title>Проект дома 4 в посёлке Михайловское</image:title>
+    </image:image>
+  </url>
+</urlset>
