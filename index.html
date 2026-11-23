@@ -554,19 +554,19 @@
   <!-- Фоновое изображение «Фон1.jpg» + Центральная надпись + Кнопка             -->
   <!-- ========================================================================= -->
   <section
-    class="relative w-full min-h-screen flex flex-col justify-end items-center overflow-hidden pb-24 sm:pb-32 md:pb-40 lg:pb-48">
+    class="relative w-full min-h-screen flex items-start justify-center overflow-hidden">
 
     <!-- 1. Фоновое изображение посёлка на весь экран -->
     <div class="absolute inset-0 z-0">
       <img src="image/Фон1.jpg" alt="Природное окружение посёлка Михайловское"
         class="w-full h-full object-cover object-center" />
-
-      <!-- Мягкий градиент для контрастности надписи -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[#151b18]/90 via-[#151b18]/35 to-[#151b18]/15"></div>
     </div>
 
-    <!-- 2. Центральный блок (только фоновое изображение, без надписей и кнопок) -->
-    <div class="relative z-10"></div>
+    <!-- 2. Логотип выше центра (не перекрывает дома) -->
+    <div class="relative z-10 w-full flex justify-center px-4 sm:px-8 mt-[20vh] sm:mt-[18vh] md:mt-[16vh]">
+      <img src="image/logo_bereza1.png" alt="Михайловское — коттеджный посёлок"
+        class="w-[88%] sm:w-[75%] md:w-[65%] lg:w-[55%] xl:w-[50%] max-w-3xl h-auto object-contain select-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.35)]" />
+    </div>
 
   </section>
 
