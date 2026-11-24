@@ -502,6 +502,17 @@
         transform-origin: center bottom !important;
       }
     }
+
+    /* При перевороте телефона в альбомную ориентацию (горизонтально при малой высоте) */
+    @media (orientation: landscape) and (max-height: 500px) {
+      .hero-logo-wrap {
+        margin-top: 8px !important;
+      }
+      .hero-logo-img {
+        max-height: 150px !important;
+        width: auto !important;
+      }
+    }
   </style>
 </head>
 
@@ -645,10 +656,10 @@
     </div>
 
     <!-- 2. Логотип выше центра (не перекрывает дома) + Семантический заголовок H1 для SEO -->
-    <div class="relative z-10 w-full flex flex-col items-center justify-center px-4 sm:px-8 mt-10 sm:mt-[14vh] md:mt-[16vh]">
+    <div class="hero-logo-wrap relative z-10 w-full flex flex-col items-center justify-center px-4 sm:px-8 mt-10 sm:mt-[14vh] md:mt-[16vh]">
       <h1 class="sr-only">Коттеджный посёлок «Михайловское» — Земельные участки у леса в Челябинской области</h1>
       <img src="image/logo_bereza1.png" alt="Михайловское — коттеджный посёлок"
-        class="w-[88%] sm:w-[75%] md:w-[65%] lg:w-[55%] xl:w-[50%] max-w-3xl h-auto object-contain select-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.35)]" />
+        class="hero-logo-img w-[88%] sm:w-[75%] md:w-[65%] lg:w-[55%] xl:w-[50%] max-w-3xl h-auto object-contain select-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.35)]" />
     </div>
 
   </section>
