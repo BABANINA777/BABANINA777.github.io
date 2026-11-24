@@ -494,8 +494,8 @@
       }
     }
 
-    /* Адаптивное кадрирование неба на смартфонах и планшетах (до 768px включительно) */
-    @media (max-width: 768px) {
+    /* Адаптивное кадрирование неба на смартфонах (только в вертикальном режиме) */
+    @media (max-width: 768px) and (orientation: portrait) {
       .hero-bg-mobile {
         object-position: center bottom !important;
         transform: scale(1.4) !important;
@@ -505,11 +505,15 @@
 
     /* При перевороте телефона в альбомную ориентацию (горизонтально при малой высоте) */
     @media (orientation: landscape) and (max-height: 500px) {
+      .hero-bg-mobile {
+        transform: none !important;
+        object-position: center bottom !important;
+      }
       .hero-logo-wrap {
-        margin-top: 8px !important;
+        margin-top: 6px !important;
       }
       .hero-logo-img {
-        max-height: 150px !important;
+        max-height: 115px !important;
         width: auto !important;
       }
     }
